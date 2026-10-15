@@ -96,27 +96,64 @@ export const why = [
   { title: 'Journeys made to order', text: 'Safaris, treks and time on the coast can be reshaped around dates, pace, children and celebrations.' },
   { title: 'Honest seasons advice', text: 'We tell you what each month is really like, including the quiet and wet ones.' },
   { title: 'A desk you can reach', text: 'Trained guides, vetted camps, and a Nairobi desk that stays on the trip with you.' },
-  { title: 'Travel that gives back', text: 'Conservation, local livelihoods and the cultures you visit are part of how every journey is planned.' },
+  { title: 'Travel that gives back', text: 'Wildlife, community livelihoods, culture, and support for children with special needs, including children with Down syndrome, are part of how we hope each journey gives back.' },
 ]
 
 export const philanthropy = {
-  title: 'Every journey can leave the place better.',
+  title: ['Beyond safaris.', 'Beyond conservation.', 'Changing lives.'],
   lede: [
-    'A journey with Camellia Horizons should leave a positive mark on the people, the wildlife and the places you visit. Responsible travel is part of how we plan: care for the environment, respect for culture, and the well-being of the communities beside the parks.',
-    'We partner with local communities, conservation organisations and careful local initiatives. That work protects Kenya’s wildlife and natural heritage, keeps livelihoods near the parks, and leaves the landscapes and cultures intact for the people who come after you.',
+    'At Camellia Horizons, every journey should leave a positive mark: protecting wildlife, empowering communities, preserving cultures, and supporting children with special needs. The greatest journeys are the ones that leave the world a little better for everyone.',
+    'A journey with us is about more than an unforgettable safari. It is also a chance to make a meaningful difference in the lives of communities across Kenya.',
+  ],
+  sections: [
+    {
+      kicker: 'Every journey creates an opportunity to give back',
+      title: 'Giving back to our communities',
+      text: [
+        'The beauty of travel lies in the places you explore and in the lives you touch along the way.',
+        'Our commitment to responsible travel goes beyond protecting wildlife and preserving Kenya’s natural heritage. We are equally committed to supporting local communities, standing with vulnerable families, and creating opportunities for children and people living with disabilities.',
+      ],
+    },
+    {
+      kicker: 'Every child deserves a chance to shine',
+      title: 'Supporting children with special needs',
+      text: [
+        'We are committed to making a positive difference in the lives of children with special needs, including children with Down syndrome, autism, and other developmental or physical disabilities.',
+        'Every child deserves love, dignity, inclusion, and the chance to thrive. Each child has abilities, dreams and potential of their own. We hope to help create a future where children of all abilities are valued, supported, and given room to flourish, through learning, belonging and personal growth.',
+        'That hope includes inclusive education, the resources a family needs, social inclusion, and stronger families. How a particular journey can contribute is something we explain when you enquire.',
+      ],
+    },
+    {
+      title: 'Empowering families and local communities',
+      text: [
+        'Our vision also reaches families facing social and economic challenges. We hope to strengthen livelihoods, widen access to education, and support community-led efforts that create lasting change.',
+      ],
+    },
+    {
+      title: 'Travel with purpose',
+      text: [
+        'When you explore Kenya with Camellia Horizons, you become part of a journey that values people as much as places.',
+        'We believe tourism can be a force for good: connecting travellers with communities, and encouraging compassion, understanding and a meaningful contribution.',
+      ],
+      close: 'Explore Kenya. Celebrate humanity. Make a difference.',
+    },
   ],
   pillars: [
     {
-      title: 'Wildlife and wild places',
-      text: 'Conservation partners help protect Kenya’s wildlife and the landscapes that sustain it, so those places stay intact.',
+      title: 'Wildlife and conservation',
+      text: 'Protecting Kenya’s wildlife and the natural habitats that sustain it.',
     },
     {
-      title: 'Livelihoods close to the parks',
-      text: 'Journeys are run with local guides, camps and community initiatives, so the work and the income stay near where you travel.',
+      title: 'Community empowerment',
+      text: 'Supporting local livelihoods and opportunities that can last.',
     },
     {
-      title: 'Culture, kept alive',
-      text: 'Time with communities is planned on their terms. Traditions are shared rather than staged, and they remain for the next generation.',
+      title: 'Cultural preservation',
+      text: 'Celebrating traditions and protecting the heritage of the places you visit.',
+    },
+    {
+      title: 'Special needs and inclusion',
+      text: 'A commitment to dignity, inclusion and opportunity for children of all abilities, including children with Down syndrome.',
     },
   ],
 }

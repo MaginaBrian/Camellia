@@ -23,22 +23,7 @@ const journeySets = [
   },
 ]
 
-export function Mark({ size = 28 }) {
-  const petals = [0, 72, 144, 216, 288]
-  return (
-    <svg width={size} height={size} viewBox="0 0 40 40" aria-hidden="true">
-      {petals.map((r) => (
-        <ellipse key={r} cx="20" cy="11" rx="6.5" ry="9" transform={`rotate(${r} 20 20)`} fill="currentColor" opacity="0.55" />
-      ))}
-      {petals.map((r) => (
-        <ellipse key={`i${r}`} cx="20" cy="14" rx="4" ry="6" transform={`rotate(${r + 36} 20 20)`} fill="currentColor" />
-      ))}
-      <circle cx="20" cy="20" r="2.6" fill="var(--gold)" />
-    </svg>
-  )
-}
-
-export default function Header({ onPlan, onPick, onAskJourney }) {
+export default function Header({ view, onPlan, onPick, onAskJourney }) {
   const [open, setOpen] = useState(false)
   const [destOpen, setDestOpen] = useState(false)
   const [journeysOpen, setJourneysOpen] = useState(false)
@@ -98,23 +83,10 @@ export default function Header({ onPlan, onPick, onAskJourney }) {
 
   return (
     <header className="header">
-      <div className="util">
-        <div className="wrap util__inner">
-          <a className="util__phone" href={brand.phoneHref}>
-            <span className="util__speak">Speak to us</span> {brand.phone}
-          </a>
-          <div className="util__right">
-            <a href="#agents" onClick={closeMenus}>
-              <span className="util__long">For travel agents</span>
-              <span className="util__short">Advisors</span>
-            </a>
-            <a className="util__email" href={`mailto:${brand.email}`}>{brand.email}</a>
-          </div>
-        </div>
-      </div>
-      <div className="header__bar wrap">
+      <div className="header__bar">
+        <div className="wrap header__inner">
         <a className="brand" href="#top" aria-label={`${brand.name}, home`} onClick={closeMenus}>
-          <Mark />
+          <img className="brand__mark" src="/images/logo-mark.png" alt="" />
           <span>{brand.name}</span>
         </a>
         <nav className={`nav ${open ? 'nav--open' : ''}`} aria-label="Main">
@@ -136,13 +108,28 @@ export default function Header({ onPlan, onPick, onAskJourney }) {
           >
             Journeys
           </button>
-          <a href="#philanthropy" onClick={closeMenus}>Philanthropy</a>
+          <a href="#philanthropy" aria-current={view === 'philanthropy' ? 'page' : undefined} onClick={closeMenus}>Philanthropy</a>
           <a href="#seasons" onClick={closeMenus}>When to go</a>
           <button className="btn btn--camellia nav__cta" type="button" onClick={() => plan({})}>Plan a trip</button>
         </nav>
         <button className="menu-btn" aria-expanded={open} aria-label="Menu" onClick={() => { setOpen((o) => !o); setDestOpen(false); setJourneysOpen(false) }}>
           <span /><span />
         </button>
+        </div>
+      </div>
+      <div className="util">
+        <div className="wrap util__inner">
+          <a className="util__phone" href={brand.phoneHref}>
+            <span className="util__speak">Speak to us</span> {brand.phone}
+          </a>
+          <div className="util__right">
+            <a href="#agents" onClick={closeMenus}>
+              <span className="util__long">For travel agents</span>
+              <span className="util__short">Advisors</span>
+            </a>
+            <a className="util__email" href={`mailto:${brand.email}`}>{brand.email}</a>
+          </div>
+        </div>
       </div>
       {destOpen && (
         <div className="dest" id="dest-panel" role="region" aria-label="Destinations">

@@ -16,8 +16,6 @@ function SocialMark({ name }) {
     </svg>
   )
 }
-import { Mark } from './Header.jsx'
-
 export function Wild() {
   return (
     <section className="wild" aria-label="Wildlife photographs">
@@ -133,17 +131,29 @@ export function Why({ onAsk }) {
 
 export function Philanthropy({ onAsk }) {
   return (
-    <section className="philanthropy" id="philanthropy">
+    <section className="philanthropy philanthropy--page" id="philanthropy">
       <div className="philanthropy__banner">
         <img src="/images/journeys/migration.jpg" alt="Wildebeest and zebra crossing a river in the Mara" />
         <div className="wrap philanthropy__banner-copy">
           <p className="kicker kicker--light">Philanthropy</p>
-          <h2>{philanthropy.title}</h2>
+          <h2>
+            {philanthropy.title.map((line) => <span key={line}>{line}</span>)}
+          </h2>
         </div>
       </div>
       <div className="wrap philanthropy__body">
         <div className="philanthropy__lede">
           {philanthropy.lede.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        </div>
+        <div className="give">
+          {philanthropy.sections.map((section) => (
+            <article key={section.title}>
+              {section.kicker ? <p className="kicker">{section.kicker}</p> : null}
+              <h3>{section.title}</h3>
+              {section.text.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              {section.close ? <p className="give__close">{section.close}</p> : null}
+            </article>
+          ))}
         </div>
         <ul className="pillars">
           {philanthropy.pillars.map((item) => (
@@ -153,7 +163,7 @@ export function Philanthropy({ onAsk }) {
             </li>
           ))}
         </ul>
-        <button className="btn btn--camellia" type="button" onClick={() => onAsk({ topic: 'How my trip can give back', message: 'I would like to know how this trip can support the places we visit.' })}>Ask how a trip gives back</button>
+        <button className="btn btn--camellia" type="button" onClick={() => onAsk({ topic: 'How my trip can give back', message: 'I would like to know how this trip can give back to communities in Kenya, including children with special needs and children with Down syndrome.' })}>Ask how a trip gives back</button>
         <p className="fineprint">River crossing photograph: Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons.</p>
       </div>
     </section>
@@ -198,7 +208,7 @@ export function Footer() {
       <img className="footer__photo" src="/images/footer.jpg?v=grass" alt="Golden grassland on an open savanna" />
       <div className="wrap footer__inner">
         <div className="brand brand--footer">
-          <Mark size={32} />
+          <img className="brand__mark" src="/images/logo-mark.png" alt="" />
           <span>{brand.name}</span>
         </div>
         <address>
