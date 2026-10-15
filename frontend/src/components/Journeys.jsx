@@ -4,21 +4,23 @@ import { destinations } from '../content.js'
 
 const price = (n) => `$${n.toLocaleString('en-US')}`
 
-export default function Journeys({ destination, place, onClear, onAsk }) {
+export default function Journeys({ destination, place, category = '', onClear, onAsk }) {
   const [all, setAll] = useState([])
   const [filter, setFilter] = useState('All')
   const [showAll, setShowAll] = useState(false)
 
   useEffect(() => { getJourneys().then(setAll) }, [])
-  useEffect(() => { setFilter('All') }, [destination, place])
+  useEffect(() => { setFilter('All') }, [destination, place, category])
 
   const pool = all.filter((j) => {
     if (place) return (j.places || []).includes(place)
     if (destination) return (j.destinations || []).includes(destination)
     return true
   })
-  const narrowed = Boolean(destination || place)
-  const listed = !narrowed && !showAll ? pool.filter((j) => j.lead) : pool
+  const byCategory = category && category !== 'all' ? pool.filter((j) => j.category === category) : pool
+  const narrowed = Boolean(destination || place || (category && category !== 'all'))
+  const expanded = showAll || category === 'all'
+  const listed = !narrowed && !expanded ? byCategory.filter((j) => j.lead) : byCategory
   const cats = ['All', ...new Set(listed.map((j) => j.category))]
   const shown = filter === 'All' ? listed : listed.filter((j) => j.category === filter)
   const country = destinations.find((d) => d.id === destination)
@@ -27,15 +29,17 @@ export default function Journeys({ destination, place, onClear, onAsk }) {
   if (place) heading = `Journeys in ${place}`
   else if (destination === 'coast') heading = 'Journeys on the coast'
   else if (country) heading = `Journeys in ${country.name}`
+  else if (category && category !== 'all') heading = `${category} journeys`
+  else if (expanded) heading = 'All journeys'
 
   return (
-    <section className="section" id="journeys">
+    <section className="section section--journeys" id="journeys">
       <div className="wrap">
         <div className="section__head">
           <h2>{heading}</h2>
           <p>Every one is a starting point. Tell us your dates and who is travelling, and we will reshape it.</p>
         </div>
-        {(narrowed || showAll) && cats.length > 2 && (
+        {(narrowed || expanded) && cats.length > 2 && (
           <div className="tabs" role="tablist" aria-label="Journey type">
             {cats.map((c) => (
               <button key={c} type="button" role="tab" aria-selected={filter === c} className={filter === c ? 'is-active' : ''} onClick={() => setFilter(c)}>
@@ -49,7 +53,7 @@ export default function Journeys({ destination, place, onClear, onAsk }) {
             <li key={j.id} className="journey">
               <img className="journey__art" src={j.image} alt="" />
               <div className="journey__body">
-                <p className="journey__meta">{j.category}, {j.days} days</p>
+                <p className="journey__meta">{j.category}, {j.days} days{(j.places || []).length ? ` · ${(j.places || []).join(', ')}` : ''}</p>
                 <h3>{j.title}</h3>
                 <p>{j.blurb}</p>
                 <div className="journey__foot">
@@ -61,10 +65,10 @@ export default function Journeys({ destination, place, onClear, onAsk }) {
           ))}
         </ul>
         <div className="journeys__more">
-          {!narrowed && !showAll && pool.length > listed.length && (
+          {!narrowed && !expanded && pool.length > listed.length && (
             <button className="link" type="button" onClick={() => setShowAll(true)}>All journeys</button>
           )}
-          {(narrowed || showAll) && (
+          {(narrowed || expanded) && (
             <button className="link" type="button" onClick={() => { setShowAll(false); onClear() }}>Show the main journeys</button>
           )}
         </div>

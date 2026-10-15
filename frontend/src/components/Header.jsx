@@ -1,5 +1,27 @@
 import { useEffect, useState } from 'react'
+import journeys from '../../../backend/journeys.json'
 import { brand, destinations } from '../content.js'
+
+const journeySets = [
+  {
+    id: 'Safari',
+    image: '/images/journeys/northern-circuit.jpg',
+    alt: 'Elephants in the Maasai Mara',
+    credit: 'Elephants, Maasai Mara. Photo: Ray in Manila, CC BY 2.0',
+  },
+  {
+    id: 'Trek',
+    image: '/images/journeys/kilimanjaro.jpg',
+    alt: 'The summit of Kilimanjaro above the clouds',
+    credit: 'Kilimanjaro. Photo: Joel Peel, CC0',
+  },
+  {
+    id: 'Beach',
+    image: '/images/journeys/island.jpg',
+    alt: 'A dhow on the water at Zanzibar',
+    credit: 'Dhow, Zanzibar. Photo: Anton Zelenov, CC BY-SA 3.0',
+  },
+]
 
 export function Mark({ size = 28 }) {
   const petals = [0, 72, 144, 216, 288]
@@ -16,41 +38,82 @@ export function Mark({ size = 28 }) {
   )
 }
 
-export default function Header({ onPlan, onPick }) {
+export default function Header({ onPlan, onPick, onAskJourney }) {
   const [open, setOpen] = useState(false)
   const [destOpen, setDestOpen] = useState(false)
+  const [journeysOpen, setJourneysOpen] = useState(false)
   const [active, setActive] = useState(destinations[0].id)
+  const [journeyCat, setJourneyCat] = useState(journeySets[0].id)
   const current = destinations.find((d) => d.id === active) || destinations[0]
+  const currentSet = journeySets.find((set) => set.id === journeyCat) || journeySets[0]
+  const panelOpen = destOpen || journeysOpen
 
   useEffect(() => {
-    if (!destOpen) return undefined
-    const onKey = (e) => { if (e.key === 'Escape') setDestOpen(false) }
-    const onDown = (e) => { if (!e.target.closest('.header')) setDestOpen(false) }
+    if (!panelOpen) return undefined
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        setDestOpen(false)
+        setJourneysOpen(false)
+      }
+    }
+    const onDown = (e) => {
+      if (!e.target.closest('.header')) {
+        setDestOpen(false)
+        setJourneysOpen(false)
+      }
+    }
     document.addEventListener('keydown', onKey)
     document.addEventListener('mousedown', onDown)
     return () => {
       document.removeEventListener('keydown', onKey)
       document.removeEventListener('mousedown', onDown)
     }
-  }, [destOpen])
+  }, [panelOpen])
+
+  function closeMenus() {
+    setOpen(false)
+    setDestOpen(false)
+    setJourneysOpen(false)
+  }
 
   function pick(destination, place) {
-    onPick({ destination, place })
-    setDestOpen(false)
-    setOpen(false)
-    document.getElementById('journeys')?.scrollIntoView({ behavior: 'smooth' })
+    onPick({ destination, place, category: '' })
+    closeMenus()
+  }
+
+  function pickCategory(category) {
+    onPick({ destination: '', place: '', category })
+    closeMenus()
   }
 
   function plan(partial) {
-    setOpen(false)
-    setDestOpen(false)
+    closeMenus()
     onPlan(partial)
+  }
+
+  function askJourney(journey) {
+    closeMenus()
+    onAskJourney(journey)
   }
 
   return (
     <header className="header">
+      <div className="util">
+        <div className="wrap util__inner">
+          <a className="util__phone" href={brand.phoneHref}>
+            <span className="util__speak">Speak to us</span> {brand.phone}
+          </a>
+          <div className="util__right">
+            <a href="#agents" onClick={closeMenus}>
+              <span className="util__long">For travel agents</span>
+              <span className="util__short">Advisors</span>
+            </a>
+            <a className="util__email" href={`mailto:${brand.email}`}>{brand.email}</a>
+          </div>
+        </div>
+      </div>
       <div className="header__bar wrap">
-        <a className="brand" href="#top" aria-label={`${brand.name}, home`} onClick={() => { setOpen(false); setDestOpen(false) }}>
+        <a className="brand" href="#top" aria-label={`${brand.name}, home`} onClick={closeMenus}>
           <Mark />
           <span>{brand.name}</span>
         </a>
@@ -60,18 +123,24 @@ export default function Header({ onPlan, onPick }) {
             type="button"
             aria-expanded={destOpen}
             aria-controls="dest-panel"
-            onClick={() => { setDestOpen((v) => !v); setOpen(false) }}
+            onClick={() => { setDestOpen((v) => !v); setJourneysOpen(false); setOpen(false) }}
           >
             Destinations
           </button>
-          <a href="#journeys" onClick={() => { setOpen(false); setDestOpen(false) }}>Journeys</a>
-          <a href="#seasons" onClick={() => { setOpen(false); setDestOpen(false) }}>When to go</a>
-          <button className="nav__link" type="button" onClick={() => plan({ advisor: 'yes', topic: 'Travel agent partnership', message: 'I am a travel advisor and would like to work with you on a trip.' })}>
-            For travel agents
+          <button
+            className="nav__link"
+            type="button"
+            aria-expanded={journeysOpen}
+            aria-controls="journey-panel"
+            onClick={() => { setJourneysOpen((v) => !v); setDestOpen(false); setOpen(false) }}
+          >
+            Journeys
           </button>
+          <a href="#philanthropy" onClick={closeMenus}>Philanthropy</a>
+          <a href="#seasons" onClick={closeMenus}>When to go</a>
           <button className="btn btn--camellia nav__cta" type="button" onClick={() => plan({})}>Plan a trip</button>
         </nav>
-        <button className="menu-btn" aria-expanded={open} aria-label="Menu" onClick={() => { setOpen((o) => !o); setDestOpen(false) }}>
+        <button className="menu-btn" aria-expanded={open} aria-label="Menu" onClick={() => { setOpen((o) => !o); setDestOpen(false); setJourneysOpen(false) }}>
           <span /><span />
         </button>
       </div>
@@ -108,6 +177,31 @@ export default function Header({ onPlan, onPick }) {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      )}
+      {journeysOpen && (
+        <div className="dest dest--journeys" id="journey-panel" role="region" aria-label="Journeys">
+          <figure className="dest__photo">
+            <img src={currentSet.image} alt={currentSet.alt} />
+            <figcaption>{currentSet.credit}</figcaption>
+          </figure>
+          {journeySets.map((set) => (
+            <div className="dest__col" key={set.id} onMouseEnter={() => setJourneyCat(set.id)}>
+              <button type="button" className="kicker kicker--btn" onClick={() => pickCategory(set.id)}>{set.id}</button>
+              <ul>
+                {journeys.filter((journey) => journey.category === set.id).map((journey) => (
+                  <li key={journey.id}>
+                    <button type="button" onFocus={() => setJourneyCat(set.id)} onClick={() => askJourney(journey)}>
+                      {journey.title}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <div className="dest__foot">
+            <button type="button" className="link" onClick={() => pickCategory('all')}>All journeys</button>
           </div>
         </div>
       )}

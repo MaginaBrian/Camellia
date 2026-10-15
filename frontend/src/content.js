@@ -88,22 +88,27 @@ export const about = {
   ],
 }
 
+export const whyIntro = 'The itinerary is built by the same team that runs it. The pace is yours, and the way we plan is meant to leave the places you visit better cared for.'
+
 export const why = [
-  { title: 'Planned by people on the ground', text: 'Your itinerary is built by the same team that runs it, so nothing is lost in translation.' },
-  { title: 'Private vehicles and guides', text: 'No shared jeeps. You set the pace, and your guide knows when to stay and when to move.' },
+  { title: 'Planned on the ground', text: 'Your itinerary is built by the same team that runs it, so nothing is lost between offices.' },
+  { title: 'Private vehicles and guides', text: 'The vehicle is yours. You set the pace, and your guide knows when to stay and when to move.' },
+  { title: 'Journeys made to order', text: 'Safaris, treks and time on the coast can be reshaped around dates, pace, children and celebrations.' },
   { title: 'Honest seasons advice', text: 'We tell you what each month is really like, including the quiet and wet ones.' },
-  { title: 'Safety and back-up', text: 'Trained guides, vetted camps and a team you can reach at any hour.' },
-  { title: 'Fully tailored', text: 'Every journey can change: parks, pace, comfort level, children, celebrations.' },
-  { title: 'Travel that gives back', text: 'Conservation, local livelihoods and the cultures you visit are built into the way every journey is planned.' },
+  { title: 'A desk you can reach', text: 'Trained guides, vetted camps, and a Nairobi desk that stays on the trip with you.' },
+  { title: 'Travel that gives back', text: 'Conservation, local livelihoods and the cultures you visit are part of how every journey is planned.' },
 ]
 
 export const philanthropy = {
   title: 'Every journey can leave the place better.',
-  lede: 'Responsible travel is part of how we plan, not an add-on. A trip with us is meant to support the wildlife, the cultures and the people who live alongside the parks.',
+  lede: [
+    'A journey with Camellia Horizons should leave a positive mark on the people, the wildlife and the places you visit. Responsible travel is part of how we plan: care for the environment, respect for culture, and the well-being of the communities beside the parks.',
+    'We partner with local communities, conservation organisations and careful local initiatives. That work protects Kenya’s wildlife and natural heritage, keeps livelihoods near the parks, and leaves the landscapes and cultures intact for the people who come after you.',
+  ],
   pillars: [
     {
       title: 'Wildlife and wild places',
-      text: 'We work with conservation partners to protect Kenya’s wildlife and the landscapes that sustain it, so those places stay intact for the people who come after you.',
+      text: 'Conservation partners help protect Kenya’s wildlife and the landscapes that sustain it, so those places stay intact.',
     },
     {
       title: 'Livelihoods close to the parks',

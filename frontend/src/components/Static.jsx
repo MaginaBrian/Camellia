@@ -1,4 +1,4 @@
-import { about, brand, proof, why, tradePoints, wildlife, philanthropy, socials } from '../content.js'
+import { about, brand, destinations, proof, why, whyIntro, tradePoints, wildlife, philanthropy, socials } from '../content.js'
 
 const socialIcons = {
   Facebook: { viewBox: '0 0 512 512', d: 'M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z' },
@@ -82,30 +82,50 @@ export function About() {
   )
 }
 
-export function Why() {
+export function Places({ onPick }) {
   return (
-    <section className="section" id="why">
+    <section className="places" aria-label="Destinations">
       <div className="wrap">
-        <div className="why-layout">
-          <figure className="why-photo">
-            <img src="/images/wildlife/leopard.jpg" alt="A leopard yawning beside a fallen tree in the Maasai Mara" />
-            <figcaption>Leopard, Maasai Mara. Photo: flowcomm, CC BY 2.0</figcaption>
-          </figure>
-          <div>
-            <div className="section__head">
-              <p className="kicker">The difference</p>
-              <h2>Why travel with {brand.name}</h2>
-            </div>
-            <ul className="why">
-              {why.map((w) => (
-                <li key={w.title}>
-                  <h3>{w.title}</h3>
-                  <p>{w.text}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="section__head places__head">
+          <p className="kicker">Destinations</p>
+          <h2>Kenya, Tanzania and the coast.</h2>
         </div>
+        <ul className="places__grid">
+          {destinations.map((place) => (
+            <li key={place.id}>
+              <button type="button" onClick={() => onPick({ destination: place.id, place: '', category: '' })}>
+                <img src={place.image} alt={place.alt} />
+                <span className="places__copy">
+                  <strong>{place.name}</strong>
+                  <em>{place.places.join(' · ')}</em>
+                  <small>{place.credit}</small>
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+export function Why({ onAsk }) {
+  return (
+    <section className="section section--tint why-band" id="why">
+      <div className="wrap">
+        <div className="section__head why-band__head">
+          <h2>Why travel with {brand.name}</h2>
+          <p>{whyIntro}</p>
+        </div>
+        <ul className="why-grid">
+          {why.map((item) => (
+            <li key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </li>
+          ))}
+        </ul>
+        <button className="btn btn--camellia why-band__cta" type="button" onClick={() => onAsk({})}>Speak to a planner</button>
       </div>
     </section>
   )
@@ -122,7 +142,9 @@ export function Philanthropy({ onAsk }) {
         </div>
       </div>
       <div className="wrap philanthropy__body">
-        <p className="philanthropy__lede">{philanthropy.lede}</p>
+        <div className="philanthropy__lede">
+          {philanthropy.lede.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        </div>
         <ul className="pillars">
           {philanthropy.pillars.map((item) => (
             <li key={item.title}>
@@ -131,7 +153,7 @@ export function Philanthropy({ onAsk }) {
             </li>
           ))}
         </ul>
-        <button className="btn btn--camellia" onClick={() => onAsk('How my trip can give back')}>Ask how a trip gives back</button>
+        <button className="btn btn--camellia" type="button" onClick={() => onAsk({ topic: 'How my trip can give back', message: 'I would like to know how this trip can support the places we visit.' })}>Ask how a trip gives back</button>
         <p className="fineprint">River crossing photograph: Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons.</p>
       </div>
     </section>
@@ -142,15 +164,28 @@ export function Agents({ onAsk }) {
   return (
     <section className="agents" id="agents">
       <div className="wrap agents__inner">
-        <img className="agents__photo" src="/images/wildlife/buffalo.jpg" alt="Cape buffalo on the floor of Ngorongoro" />
         <div>
-          <p className="kicker kicker--light">For agencies</p>
-          <h2>Working with a travel agency?</h2>
-          <p>We act as your ground team in East Africa. You keep the client relationship, and we deliver the trip.</p>
+          <p className="kicker">For travel advisors</p>
+          <h2>Your ground team in East Africa.</h2>
+          <p>You keep the client. We arrange the vehicles, guides and camps, and the trip can run under your name.</p>
           <ul>
-            {tradePoints.map((t) => <li key={t}>{t}</li>)}
+            {tradePoints.map((point) => <li key={point}>{point}</li>)}
           </ul>
-          <button className="btn btn--light" onClick={() => onAsk('Travel agent partnership')}>Talk to our partner desk</button>
+        </div>
+        <div className="agents__card">
+          <h3>Talk to the Nairobi desk</h3>
+          <p className="agents__where">{brand.address.join(', ')}</p>
+          <a href={brand.phoneHref}>{brand.phone}</a>
+          <a href={`mailto:${brand.email}`}>{brand.email}</a>
+          <a href={`https://wa.me/${brand.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp</a>
+          <a href={brand.map} target="_blank" rel="noreferrer">View on map</a>
+          <button
+            className="btn btn--camellia"
+            type="button"
+            onClick={() => onAsk({ advisor: 'yes', topic: 'Travel agent partnership', message: 'I am a travel advisor and would like to work with you on a trip.' })}
+          >
+            Plan a trip with us
+          </button>
         </div>
       </div>
     </section>
@@ -160,6 +195,7 @@ export function Agents({ onAsk }) {
 export function Footer() {
   return (
     <footer className="footer">
+      <img className="footer__photo" src="/images/footer.jpg?v=grass" alt="Golden grassland on an open savanna" />
       <div className="wrap footer__inner">
         <div className="brand brand--footer">
           <Mark size={32} />
