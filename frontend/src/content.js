@@ -101,6 +101,7 @@ export const why = [
 
 export const philanthropy = {
   title: ['Beyond safaris.', 'Beyond conservation.', 'Changing lives.'],
+  summary: 'Explore Kenya. Celebrate humanity. Make a difference.',
   lede: [
     'At Camellia Horizons, every journey should leave a positive mark: protecting wildlife, empowering communities, preserving cultures, and supporting children with special needs. The greatest journeys are the ones that leave the world a little better for everyone.',
     'A journey with us is about more than an unforgettable safari. It is also a chance to make a meaningful difference in the lives of communities across Kenya.',

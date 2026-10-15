@@ -30,7 +30,7 @@ a { color: inherit; }
 .wrap { width: min(1200px, 100% - 48px); margin-inline: auto; }
 
 /* Buttons */
-.btn { display: inline-block; font: 500 1rem var(--sans); padding: 0.85rem 1.6rem; border: 1px solid transparent; border-radius: 2px; text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; }
+.btn { display: inline-block; font: 500 1rem var(--sans); padding: 0.85rem 1.6rem; border: 1px solid transparent; border-radius: 0; text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; }
 .btn:disabled { opacity: .6; cursor: wait; }
 .btn--camellia { background: var(--green); color: #fff; }
 .btn--camellia:hover { background: var(--green-dark); }
@@ -54,7 +54,7 @@ a { color: inherit; }
 .util__right { display: flex; align-items: center; gap: 1.25rem; }
 .util__short { display: none; }
 .brand { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; font: 600 1.5rem var(--serif); letter-spacing: .01em; color: #fff; }
-.brand__mark { height: 48px; width: auto; display: block; background: #fff; border-radius: 6px; padding: 3px 8px; object-fit: contain; }
+.brand__mark { height: 48px; width: auto; display: block; background: #fff; border-radius: 0; padding: 3px 8px; object-fit: contain; }
 .nav { display: flex; align-items: center; gap: 1.15rem; }
 .nav a:not(.btn), .nav__link { text-decoration: none; font: inherit; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; opacity: .92; background: none; border: 0; color: inherit; cursor: pointer; padding: 0; }
 .nav a:not(.btn):hover, .nav__link:hover, .nav__link[aria-expanded='true'] { opacity: 1; }
@@ -216,6 +216,8 @@ a { color: inherit; }
 .why p { color: var(--muted); font-size: .98rem; }
 
 /* Philanthropy */
+.philanthropy-teaser { padding: clamp(48px, 7vw, 80px) 0 0; }
+.philanthropy-teaser__line { margin-top: .2rem; padding: .95rem 1.1rem; background: #fffdf8; border: 1px solid var(--line); font-size: 1.05rem; }
 .philanthropy--page { padding-top: var(--header-h); }
 .philanthropy__banner { position: relative; min-height: 340px; display: flex; align-items: flex-end; color: #fff; overflow: hidden; background: var(--forest-deep); }
 .philanthropy__banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }

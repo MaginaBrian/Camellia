@@ -4,7 +4,7 @@ import Hero from './components/Hero.jsx'
 import Journeys from './components/Journeys.jsx'
 import Seasons from './components/Seasons.jsx'
 import Enquire from './components/Enquire.jsx'
-import { Agents, Footer, Philanthropy, Places, Why } from './components/Static.jsx'
+import { Agents, Footer, Philanthropy, PhilanthropyTeaser, Places, Why } from './components/Static.jsx'
 
 function Speak({ onPlan }) {
   const [hidden, setHidden] = useState(false)
@@ -110,6 +110,7 @@ export default function App() {
             />
             <Why onAsk={openPlan} />
             <Agents onAsk={openPlan} />
+            <PhilanthropyTeaser onAsk={openPlan} />
             <Seasons />
           </>
         )}

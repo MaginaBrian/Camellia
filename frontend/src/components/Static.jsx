@@ -129,6 +129,31 @@ export function Why({ onAsk }) {
   )
 }
 
+const giveBackAsk = {
+  topic: 'How my trip can give back',
+  message: 'I would like to know how this trip can give back to communities in Kenya, including children with special needs and children with Down syndrome.',
+}
+
+export function PhilanthropyTeaser({ onAsk }) {
+  return (
+    <section className="philanthropy-teaser" aria-label="Philanthropy">
+      <div className="wrap">
+        <p className="kicker">Philanthropy</p>
+        <p className="philanthropy-teaser__line">{philanthropy.summary}</p>
+        <ul className="pillars">
+          {philanthropy.pillars.map((item) => (
+            <li key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </li>
+          ))}
+        </ul>
+        <button className="btn btn--camellia" type="button" onClick={() => onAsk(giveBackAsk)}>Ask how a trip gives back</button>
+      </div>
+    </section>
+  )
+}
+
 export function Philanthropy({ onAsk }) {
   return (
     <section className="philanthropy philanthropy--page" id="philanthropy">
@@ -163,7 +188,7 @@ export function Philanthropy({ onAsk }) {
             </li>
           ))}
         </ul>
-        <button className="btn btn--camellia" type="button" onClick={() => onAsk({ topic: 'How my trip can give back', message: 'I would like to know how this trip can give back to communities in Kenya, including children with special needs and children with Down syndrome.' })}>Ask how a trip gives back</button>
+        <button className="btn btn--camellia" type="button" onClick={() => onAsk(giveBackAsk)}>Ask how a trip gives back</button>
         <p className="fineprint">River crossing photograph: Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons.</p>
       </div>
     </section>
