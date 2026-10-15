@@ -1,0 +1,77 @@
+[
+  {
+    "id": "northern-circuit",
+    "category": "Safari",
+    "title": "Northern circuit, privately guided",
+    "days": 7,
+    "from": 3400,
+    "blurb": "Tarangire's elephants, the Ngorongoro Crater floor and the open Serengeti, with a private vehicle and one guide throughout.",
+    "image": "/images/journeys/northern-circuit.jpg",
+    "destinations": ["tanzania"],
+    "places": ["Serengeti", "Ngorongoro", "Tarangire"],
+    "lead": true,
+    "tone": "#8a6a3b"
+  },
+  {
+    "id": "migration-season",
+    "category": "Safari",
+    "title": "Following the Great Migration",
+    "days": 8,
+    "from": 4600,
+    "blurb": "Camps placed where the herds are for your month of travel, from calving plains to river crossings.",
+    "image": "/images/journeys/migration.jpg",
+    "destinations": ["kenya", "tanzania"],
+    "places": ["Maasai Mara", "Serengeti"],
+    "tone": "#6b7a45"
+  },
+  {
+    "id": "short-safari",
+    "category": "Safari",
+    "title": "Four days, one great park",
+    "days": 4,
+    "from": 1700,
+    "blurb": "A shorter safari that goes deep into a single park instead of rushing through several.",
+    "image": "/images/journeys/short-safari.jpg",
+    "destinations": ["kenya", "tanzania"],
+    "places": ["Maasai Mara", "Serengeti", "Ngorongoro", "Tarangire"],
+    "tone": "#9b7b4a"
+  },
+  {
+    "id": "kilimanjaro-lemosho",
+    "category": "Trek",
+    "title": "Kilimanjaro by the Lemosho route",
+    "days": 8,
+    "from": 2900,
+    "blurb": "The longer approach with time to acclimatise, a full mountain crew and a medical kit on every climb.",
+    "image": "/images/journeys/kilimanjaro.jpg",
+    "destinations": ["tanzania"],
+    "places": ["Kilimanjaro"],
+    "lead": true,
+    "tone": "#4f6b73"
+  },
+  {
+    "id": "meru-warmup",
+    "category": "Trek",
+    "title": "Mount Meru, then the safari",
+    "days": 10,
+    "from": 3800,
+    "blurb": "Walk Meru's crater rim first, then head into the parks with strong legs and fewer crowds behind you.",
+    "image": "/images/journeys/meru.jpg",
+    "destinations": ["tanzania"],
+    "places": ["Mount Meru"],
+    "tone": "#58705a"
+  },
+  {
+    "id": "island-stay",
+    "category": "Beach",
+    "title": "Island stay after the bush",
+    "days": 5,
+    "from": 1500,
+    "blurb": "Five unhurried days on the coast: a boutique stay, a dhow trip and nothing else you have to do.",
+    "image": "/images/journeys/island.jpg",
+    "destinations": ["coast"],
+    "places": ["Zanzibar"],
+    "lead": true,
+    "tone": "#3f7f86"
+  }
+]
