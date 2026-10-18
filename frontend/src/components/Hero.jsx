@@ -1,13 +1,29 @@
+import { useEffect, useRef } from 'react'
 import { aboutLines, brand } from '../content.js'
 
 export default function Hero({ onPlan }) {
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return undefined
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) video.pause()
+    return undefined
+  }, [])
+
   return (
     <>
     <section className="hero" id="top">
-      <img
+      <video
+        ref={videoRef}
         className="hero__photo"
-        src="/images/hero.jpg"
-        alt="A male lion resting in the grass of the Serengeti"
+        src="/images/hero.mp4"
+        poster="/images/hero-poster.jpg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
       />
       <div className="hero__shade" />
       <div className="wrap hero__inner">
@@ -20,8 +36,8 @@ export default function Hero({ onPlan }) {
           <button className="btn btn--camellia" type="button" onClick={() => onPlan({})}>Plan my journey</button>
           <a className="btn btn--ghost" href="#journeys">See journeys</a>
         </div>
-        <p className="hero__credit">Lion, Serengeti. Photo: Giles Laurent, CC BY-SA 4.0</p>
       </div>
+      <p className="hero__corner">Beyond the wild.<br />Beyond luxury.</p>
     </section>
     <section className="intro" aria-label="About">
       <div className="wrap intro__inner">
