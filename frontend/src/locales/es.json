@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "description": "Safaris de lujo a medida, encuentros culturales, ascensos a la montaña y escapadas a la playa, planificados por Camellia Horizons.",
+    "homeTitle": "Camellia Horizons | Viajes privados por África Oriental",
+    "philanthropyTitle": "Filantropía | Camellia Horizons"
+  },
+  "lang": {
+    "label": "Idioma"
+  },
+  "nav": {
+    "home": "Camellia Horizons, inicio",
+    "main": "Principal",
+    "destinations": "Destinos",
+    "journeys": "Viajes",
+    "philanthropy": "Filantropía",
+    "when": "Cuándo ir",
+    "planTrip": "Planear un viaje",
+    "menu": "Menú",
+    "speak": "Hable con nosotros",
+    "agentsLong": "Para agentes de viajes",
+    "agentsShort": "Asesores",
+    "countries": "Países",
+    "places": "Lugares",
+    "allJourneys": "Todos los viajes",
+    "destinationsPanel": "Destinos",
+    "journeysPanel": "Viajes"
+  },
+  "hero": {
+    "line1": "Esta es tu África.",
+    "line2": "Tu historia.",
+    "line3": "A tu manera.",
+    "lede": "Safaris de lujo a medida, encuentros culturales auténticos, ascensos a la montaña y escapadas idílicas a la playa, pensados por un pequeño equipo de expertos en el destino y hechos realidad por especialistas locales con décadas de experiencia en África.",
+    "plan": "Planear mi viaje",
+    "see": "Ver viajes",
+    "corner1": "Más allá de lo salvaje.",
+    "corner2": "Más allá del lujo.",
+    "aboutLabel": "Acerca de"
+  },
+  "aboutLines": [
+    "Cada viaje se diseña según quién viaja: los parques, el ritmo y la época del año, y lo planifican personas que conocen el terreno.",
+    "Los guías, los campamentos y el trabajo de cada día permanecen cerca de los lugares que usted visita."
+  ],
+  "destinations": {
+    "heading": "Kenia, Tanzania y la costa.",
+    "kenya": {
+      "name": "Kenia",
+      "alt": "Elefantes en la Masái Mara",
+      "credit": "Elefantes, Masái Mara. Foto: Ray in Manila, CC BY 2.0"
+    },
+    "tanzania": {
+      "name": "Tanzania",
+      "alt": "La cumbre del Kilimanjaro sobre las nubes",
+      "credit": "Kilimanjaro. Foto: Joel Peel, CC0"
+    },
+    "coast": {
+      "name": "La costa",
+      "alt": "Un dhow en el agua de Zanzíbar",
+      "credit": "Dhow, Zanzíbar. Foto: Anton Zelenov, CC BY-SA 3.0",
+      "short": "la costa"
+    }
+  },
+  "journeySets": {
+    "Safari": {
+      "alt": "Elefantes en la Masái Mara",
+      "credit": "Elefantes, Masái Mara. Foto: Ray in Manila, CC BY 2.0"
+    },
+    "Trek": {
+      "alt": "La cumbre del Kilimanjaro sobre las nubes",
+      "credit": "Kilimanjaro. Foto: Joel Peel, CC0"
+    },
+    "Beach": {
+      "alt": "Un dhow en el agua de Zanzíbar",
+      "credit": "Dhow, Zanzíbar. Foto: Anton Zelenov, CC BY-SA 3.0"
+    }
+  },
+  "categories": {
+    "All": "Todos",
+    "Safari": "Safari",
+    "Trek": "Trekking",
+    "Beach": "Playa"
+  },
+  "journeysHead": {
+    "usual": "Los viajes que más planificamos",
+    "intro": "Cada uno es un punto de partida. Cuéntenos sus fechas y quién viaja, y lo adaptaremos.",
+    "in": "Viajes en {{place}}",
+    "coast": "Viajes en la costa",
+    "category": "Viajes de {{category}}",
+    "all": "Todos los viajes",
+    "type": "Tipo de viaje",
+    "days": "{{count}} días",
+    "from": "Desde {{price}} por persona",
+    "ask": "Preguntar por este viaje",
+    "showMain": "Ver los viajes principales",
+    "fineprint": "Los precios son una guía para dos viajeros que comparten y cambian según la temporada y el campamento. Fotografías de los viajes: Ray in Manila; Charles J. Sharp; Bernard Dupont; Joel Peel; Andy Witchger; Anton Zelenov. Vía Wikimedia Commons."
+  },
+  "journeys": {
+    "northern-circuit": {
+      "title": "Circuito norte, con guía privado",
+      "blurb": "Los elefantes de Tarangire, el suelo del cráter de Ngorongoro y el Serengeti abierto, con un vehículo privado y un mismo guía todo el recorrido."
+    },
+    "migration-season": {
+      "title": "Siguiendo la gran migración",
+      "blurb": "Campamentos situados donde estén las manadas en su mes de viaje, desde las llanuras de parto hasta los cruces de río."
+    },
+    "short-safari": {
+      "title": "Cuatro días, un gran parque",
+      "blurb": "Un safari más corto que se adentra en un solo parque en lugar de recorrer varios a toda prisa."
+    },
+    "kilimanjaro-lemosho": {
+      "title": "El Kilimanjaro por la ruta Lemosho",
+      "blurb": "La aproximación más larga, con tiempo para aclimatarse, un equipo completo de montaña y un botiquín en cada ascenso."
+    },
+    "meru-warmup": {
+      "title": "El monte Meru y después el safari",
+      "blurb": "Camine primero por el borde del cráter del Meru y luego entre en los parques con las piernas fuertes y menos gente detrás."
+    },
+    "island-stay": {
+      "title": "Estancia de playa después de la sabana",
+      "blurb": "Cinco días sin prisas en la costa: un alojamiento boutique, un paseo en dhow y nada más que hacer."
+    }
+  },
+  "why": {
+    "heading": "Por qué viajar con {{name}}",
+    "intro": "El itinerario lo prepara el mismo equipo que lo lleva a cabo. El ritmo es el suyo, y la forma en que planificamos busca dejar mejor cuidados los lugares que visita.",
+    "planner": "Hablar con un planificador",
+    "items": [
+      { "title": "Planificado sobre el terreno", "text": "Su itinerario lo prepara el mismo equipo que lo lleva a cabo, así que nada se pierde entre oficinas." },
+      { "title": "Vehículos y guías privados", "text": "El vehículo es suyo. Usted marca el ritmo, y su guía sabe cuándo quedarse y cuándo seguir." },
+      { "title": "Viajes a medida", "text": "Safaris, ascensos y tiempo en la costa pueden adaptarse a las fechas, el ritmo, los niños y las celebraciones." },
+      { "title": "Consejo honesto sobre las temporadas", "text": "Le decimos cómo es de verdad cada mes, también los tranquilos y los lluviosos." },
+      { "title": "Un escritorio al que puede llamar", "text": "Guías formados, campamentos revisados y un escritorio en Nairobi que sigue el viaje con usted." },
+      { "title": "Un viaje que devuelve algo", "text": "La fauna, los medios de vida, la cultura y el apoyo a niños con necesidades especiales, incluidos los niños con síndrome de Down, forman parte de cómo esperamos que cada viaje devuelva algo." }
+    ]
+  },
+  "agents": {
+    "kicker": "Para asesores de viajes",
+    "heading": "Su equipo en tierra en África Oriental.",
+    "lede": "Usted conserva al cliente. Nosotros organizamos los vehículos, los guías y los campamentos, y el viaje puede realizarse con su nombre.",
+    "points": [
+      "Tarifas e itinerarios con su propia marca",
+      "Operación en tierra, vehículos y guías incluidos",
+      "Un contacto con nombre que responde pronto",
+      "Apoyo para sus clientes a cualquier hora"
+    ],
+    "desk": "Hable con el escritorio de Nairobi",
+    "plan": "Planear un viaje con nosotros",
+    "topic": "Colaboración con agentes de viajes",
+    "message": "Soy asesor de viajes y me gustaría trabajar con ustedes en un viaje."
+  },
+  "philanthropy": {
+    "kicker": "Filantropía",
+    "summary": "Explore Kenia. Celebre la humanidad. Marque la diferencia.",
+    "title": ["Más allá de los safaris.", "Más allá de la conservación.", "Cambiar vidas."],
+    "lede": [
+      "En Camellia Horizons, cada viaje debería dejar una huella positiva: proteger la fauna, fortalecer a las comunidades, preservar las culturas y apoyar a los niños con necesidades especiales. Los grandes viajes son los que dejan el mundo un poco mejor para todos.",
+      "Un viaje con nosotros es más que un safari inolvidable. También es una oportunidad de marcar una diferencia real en la vida de comunidades de Kenia."
+    ],
+    "ask": "Pregunte cómo un viaje devuelve algo",
+    "askTopic": "Cómo mi viaje puede devolver algo",
+    "askMessage": "Me gustaría saber cómo este viaje puede devolver algo a las comunidades de Kenia, incluidos los niños con necesidades especiales y los niños con síndrome de Down.",
+    "bannerAlt": "Ñus y cebras cruzando un río en la Mara",
+    "photoCredit": "Fotografía del cruce del río: Charles J. Sharp, CC BY-SA 4.0, vía Wikimedia Commons.",
+    "sections": [
+      {
+        "kicker": "Cada viaje crea una oportunidad de devolver algo",
+        "title": "Devolver algo a nuestras comunidades",
+        "text": [
+          "La belleza de viajar está en los lugares que explora y en las vidas que toca por el camino.",
+          "Nuestro compromiso con un viaje responsable va más allá de proteger la fauna y preservar el patrimonio natural de Kenia. También nos comprometemos a apoyar a las comunidades locales, a estar junto a las familias vulnerables y a crear oportunidades para los niños y las personas que viven con discapacidad."
+        ]
+      },
+      {
+        "kicker": "Cada niño merece una oportunidad de brillar",
+        "title": "Apoyo a los niños con necesidades especiales",
+        "text": [
+          "Nos comprometemos a marcar una diferencia positiva en la vida de los niños con necesidades especiales, incluidos los niños con síndrome de Down, autismo y otras discapacidades del desarrollo o físicas.",
+          "Cada niño merece amor, dignidad, inclusión y la oportunidad de prosperar. Cada uno tiene capacidades, sueños y un potencial propios. Esperamos ayudar a crear un futuro en el que los niños de todas las capacidades sean valorados, apoyados y tengan espacio para florecer, a través del aprendizaje, la pertenencia y el crecimiento personal.",
+          "Esa esperanza incluye una educación inclusiva, los recursos que una familia necesita, la inclusión social y familias más fuertes. Cómo puede contribuir un viaje concreto es algo que explicamos cuando usted consulta."
+        ]
+      },
+      {
+        "title": "Fortalecer a las familias y a las comunidades locales",
+        "text": [
+          "Nuestra visión también alcanza a las familias que enfrentan retos sociales y económicos. Esperamos fortalecer los medios de vida, ampliar el acceso a la educación y apoyar esfuerzos dirigidos por la comunidad que creen un cambio duradero."
+        ]
+      },
+      {
+        "title": "Viajar con propósito",
+        "text": [
+          "Cuando explora Kenia con Camellia Horizons, forma parte de un viaje que valora a las personas tanto como a los lugares.",
+          "Creemos que el turismo puede ser una fuerza para el bien: conectar a los viajeros con las comunidades y fomentar la compasión, la comprensión y una contribución con sentido."
+        ],
+        "close": "Explore Kenia. Celebre la humanidad. Marque la diferencia."
+      }
+    ],
+    "pillars": [
+      { "title": "Fauna y conservación", "text": "Proteger la fauna de Kenia y los hábitats naturales que la sostienen." },
+      { "title": "Fortalecimiento comunitario", "text": "Apoyar medios de vida locales y oportunidades que puedan durar." },
+      { "title": "Preservación cultural", "text": "Celebrar las tradiciones y proteger el patrimonio de los lugares que visita." },
+      { "title": "Necesidades especiales e inclusión", "text": "Un compromiso con la dignidad, la inclusión y la oportunidad para los niños de todas las capacidades, incluidos los niños con síndrome de Down." }
+    ]
+  },
+  "seasons": {
+    "heading": "Cuándo ir",
+    "intro": "Elija un mes para ver cómo suelen ser el tiempo, la afluencia y la fauna. Los patrones cambian de un año a otro, así que confirmamos los detalles cuando planificamos su viaje.",
+    "month": "Mes",
+    "weather": "Tiempo",
+    "visitors": "Visitantes"
+  },
+  "months": [
+    { "m": "Ene", "climate": "Seco y cálido", "crowds": "Moderado", "note": "Empieza la época de partos en las llanuras del sur, lo que acerca a leones y guepardos a las crías." },
+    { "m": "Feb", "climate": "Caluroso y casi seco", "crowds": "Concurrido", "note": "Pleno de la época de partos, con las manadas extendidas por las llanuras de hierba corta." },
+    { "m": "Mar", "climate": "Llegan las lluvias", "crowds": "Tranquilo", "note": "Paisajes verdes y buenas tarifas. Los chaparrones suelen llegar por la tarde." },
+    { "m": "Abr", "climate": "Lluvias largas", "crowds": "Tranquilo", "note": "El tramo más húmedo. Algunos campamentos cierran, pero los que abren ofrecen buen valor y caminos vacíos." },
+    { "m": "May", "climate": "Las lluvias amainan", "crowds": "Tranquilo", "note": "Paisaje exuberante, excelente avifauna y manadas que empiezan a moverse hacia el noroeste." },
+    { "m": "Jun", "climate": "Seco y fresco", "crowds": "Moderado", "note": "Los caminos se secan y las manadas recorren el corredor occidental." },
+    { "m": "Jul", "climate": "Seco y fresco", "crowds": "Concurrido", "note": "Las manadas llegan a los ríos del norte y los cruces se vuelven posibles." },
+    { "m": "Ago", "climate": "Seco", "crowds": "Concurrido", "note": "Mes punta del safari. Reserve pronto para los mejores campamentos y los mejores puntos de cruce." },
+    { "m": "Sep", "climate": "Seco", "crowds": "Concurrido", "note": "Los cruces continúan y la hierba está corta, así que es fácil observar a los depredadores." },
+    { "m": "Oct", "climate": "Seco, más cálido", "crowds": "Moderado", "note": "Menos vehículos en los ríos del norte antes de que empiecen las lluvias cortas." },
+    { "m": "Nov", "climate": "Lluvias cortas", "crowds": "Tranquilo", "note": "Las manadas vuelven hacia el sur. Tormentas breves, llanuras verdes y precios más bajos." },
+    { "m": "Dic", "climate": "Cálido, algunos chubascos", "crowds": "Concurrido", "note": "La temporada festiva trae más gente, pero la fauna de las llanuras del sur es excelente." }
+  ],
+  "footer": {
+    "photoAlt": "Pradera dorada en una sabana abierta",
+    "address": "Dirección",
+    "city": "Lavington, Nairobi",
+    "country": "Kenia",
+    "contacts": "Contactos",
+    "social": "Redes",
+    "map": "Ver en el mapa",
+    "legal": "{{year}} {{name}}. Todos los derechos reservados."
+  },
+  "enquire": {
+    "close": "Cerrar",
+    "for": "Consulta para {{place}}",
+    "thanks": "Gracias. Hemos recibido su solicitud.",
+    "reply": "Un planificador responderá por correo en un día laborable.",
+    "title": "Planear este viaje",
+    "first": "Nombre",
+    "last": "Apellidos",
+    "phone": "Teléfono o WhatsApp",
+    "email": "Correo",
+    "advisor": "¿Es asesor de viajes?",
+    "no": "No",
+    "yes": "Sí",
+    "country": "Elija un país",
+    "eastAfrica": "África Oriental",
+    "place": "Elija un lugar",
+    "anyPlace": "Cualquier lugar",
+    "countryFirst": "Primero elija un país",
+    "month": "Mes de viaje",
+    "unsure": "Aún no lo sé",
+    "travellers": "Viajeros",
+    "about": "Cuéntenos del viaje",
+    "placeholder": "Fechas, quién viaja y qué espera ver.",
+    "consent": "Acepto que {{name}} use estos datos para responder sobre este viaje.",
+    "send": "Enviar mi solicitud",
+    "sending": "Enviando...",
+    "chat": "¿Prefiere conversar? Escríbanos por WhatsApp",
+    "planMessage": "Me gustaría planear {{title}}.",
+    "advisorPrefix": "Asesor de viajes. ",
+    "fallbackAlt": "Un león macho descansando en la hierba del Serengeti",
+    "fallbackCredit": "León, Serengeti. Foto: Giles Laurent, CC BY-SA 4.0",
+    "errors": {
+      "first": "Escriba su nombre.",
+      "last": "Escriba sus apellidos.",
+      "message": "Cuéntenos un poco del viaje (al menos 10 caracteres).",
+      "consent": "Confirme que podemos responder sobre este viaje.",
+      "name": "Escriba su nombre.",
+      "email": "Escriba un correo válido."
+    }
+  },
+  "errors": {
+    "network": "No pudimos conectar con el servidor. Revise su conexión o escríbanos por WhatsApp.",
+    "generic": "Algo salió mal. Inténtelo de nuevo.",
+    "rate": "Demasiadas solicitudes. Inténtelo más tarde."
+  }
+}

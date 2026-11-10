@@ -1,4 +1,5 @@
-import { about, brand, destinations, proof, why, whyIntro, tradePoints, wildlife, philanthropy, socials } from '../content.js'
+import { useTranslation } from 'react-i18next'
+import { brand, destinations, proof, wildlife, socials, about } from '../content.js'
 
 const socialIcons = {
   Facebook: { viewBox: '0 0 512 512', d: 'M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z' },
@@ -81,22 +82,23 @@ export function About() {
 }
 
 export function Places({ onPick }) {
+  const { t } = useTranslation()
   return (
-    <section className="places" aria-label="Destinations">
+    <section className="places" aria-label={t('nav.destinations')}>
       <div className="wrap">
         <div className="section__head places__head">
-          <p className="kicker">Destinations</p>
-          <h2>Kenya, Tanzania and the coast.</h2>
+          <p className="kicker">{t('nav.destinations')}</p>
+          <h2>{t('destinations.heading')}</h2>
         </div>
         <ul className="places__grid">
           {destinations.map((place) => (
             <li key={place.id}>
               <button type="button" onClick={() => onPick({ destination: place.id, place: '', category: '' })}>
-                <img src={place.image} alt={place.alt} />
+                <img src={place.image} alt={t(`destinations.${place.id}.alt`)} />
                 <span className="places__copy">
-                  <strong>{place.name}</strong>
+                  <strong>{t(`destinations.${place.id}.name`)}</strong>
                   <em>{place.places.join(' · ')}</em>
-                  <small>{place.credit}</small>
+                  <small>{t(`destinations.${place.id}.credit`)}</small>
                 </span>
               </button>
             </li>
@@ -108,70 +110,74 @@ export function Places({ onPick }) {
 }
 
 export function Why({ onAsk }) {
+  const { t } = useTranslation()
+  const items = t('why.items', { returnObjects: true })
   return (
     <section className="section section--tint why-band" id="why">
       <div className="wrap">
         <div className="section__head why-band__head">
-          <h2>Why travel with {brand.name}</h2>
-          <p>{whyIntro}</p>
+          <h2>{t('why.heading', { name: brand.name })}</h2>
+          <p>{t('why.intro')}</p>
         </div>
         <ul className="why-grid">
-          {why.map((item) => (
+          {items.map((item) => (
             <li key={item.title}>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </li>
           ))}
         </ul>
-        <button className="btn btn--camellia why-band__cta" type="button" onClick={() => onAsk({})}>Speak to a planner</button>
+        <button className="btn btn--camellia why-band__cta" type="button" onClick={() => onAsk({})}>{t('why.planner')}</button>
       </div>
     </section>
   )
 }
 
-const giveBackAsk = {
-  topic: 'How my trip can give back',
-  message: 'I would like to know how this trip can give back to communities in Kenya, including children with special needs and children with Down syndrome.',
-}
-
 export function PhilanthropyTeaser({ onAsk }) {
+  const { t } = useTranslation()
+  const pillars = t('philanthropy.pillars', { returnObjects: true })
   return (
-    <section className="philanthropy-teaser" aria-label="Philanthropy">
+    <section className="philanthropy-teaser" aria-label={t('philanthropy.kicker')}>
       <div className="wrap">
-        <p className="kicker">Philanthropy</p>
-        <p className="philanthropy-teaser__line">{philanthropy.summary}</p>
+        <p className="kicker">{t('philanthropy.kicker')}</p>
+        <p className="philanthropy-teaser__line">{t('philanthropy.summary')}</p>
         <ul className="pillars">
-          {philanthropy.pillars.map((item) => (
+          {pillars.map((item) => (
             <li key={item.title}>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </li>
           ))}
         </ul>
-        <button className="btn btn--camellia" type="button" onClick={() => onAsk(giveBackAsk)}>Ask how a trip gives back</button>
+        <button className="btn btn--camellia" type="button" onClick={() => onAsk({ topic: t('philanthropy.askTopic'), message: t('philanthropy.askMessage') })}>{t('philanthropy.ask')}</button>
       </div>
     </section>
   )
 }
 
 export function Philanthropy({ onAsk }) {
+  const { t } = useTranslation()
+  const title = t('philanthropy.title', { returnObjects: true })
+  const lede = t('philanthropy.lede', { returnObjects: true })
+  const sections = t('philanthropy.sections', { returnObjects: true })
+  const pillars = t('philanthropy.pillars', { returnObjects: true })
   return (
     <section className="philanthropy philanthropy--page" id="philanthropy">
       <div className="philanthropy__banner">
-        <img src="/images/journeys/migration.jpg" alt="Wildebeest and zebra crossing a river in the Mara" />
+        <img src="/images/journeys/migration.jpg" alt={t('philanthropy.bannerAlt')} />
         <div className="wrap philanthropy__banner-copy">
-          <p className="kicker kicker--light">Philanthropy</p>
+          <p className="kicker kicker--light">{t('philanthropy.kicker')}</p>
           <h2>
-            {philanthropy.title.map((line) => <span key={line}>{line}</span>)}
+            {title.map((line) => <span key={line}>{line}</span>)}
           </h2>
         </div>
       </div>
       <div className="wrap philanthropy__body">
         <div className="philanthropy__lede">
-          {philanthropy.lede.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {lede.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </div>
         <div className="give">
-          {philanthropy.sections.map((section) => (
+          {sections.map((section) => (
             <article key={section.title}>
               {section.kicker ? <p className="kicker">{section.kicker}</p> : null}
               <h3>{section.title}</h3>
@@ -181,45 +187,47 @@ export function Philanthropy({ onAsk }) {
           ))}
         </div>
         <ul className="pillars">
-          {philanthropy.pillars.map((item) => (
+          {pillars.map((item) => (
             <li key={item.title}>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </li>
           ))}
         </ul>
-        <button className="btn btn--camellia" type="button" onClick={() => onAsk(giveBackAsk)}>Ask how a trip gives back</button>
-        <p className="fineprint">River crossing photograph: Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons.</p>
+        <button className="btn btn--camellia" type="button" onClick={() => onAsk({ topic: t('philanthropy.askTopic'), message: t('philanthropy.askMessage') })}>{t('philanthropy.ask')}</button>
+        <p className="fineprint">{t('philanthropy.photoCredit')}</p>
       </div>
     </section>
   )
 }
 
 export function Agents({ onAsk }) {
+  const { t } = useTranslation()
+  const points = t('agents.points', { returnObjects: true })
   return (
     <section className="agents" id="agents">
       <div className="wrap agents__inner">
         <div>
-          <p className="kicker">For travel advisors</p>
-          <h2>Your ground team in East Africa.</h2>
-          <p>You keep the client. We arrange the vehicles, guides and camps, and the trip can run under your name.</p>
+          <p className="kicker">{t('agents.kicker')}</p>
+          <h2>{t('agents.heading')}</h2>
+          <p>{t('agents.lede')}</p>
           <ul>
-            {tradePoints.map((point) => <li key={point}>{point}</li>)}
+            {points.map((point) => <li key={point}>{point}</li>)}
           </ul>
         </div>
         <div className="agents__card">
-          <h3>Talk to the Nairobi desk</h3>
-          <p className="agents__where">{brand.address.join(', ')}</p>
+          <h3>{t('agents.desk')}</h3>
+          <p className="agents__where">{t('footer.city')}, {t('footer.country')}</p>
           <a href={brand.phoneHref}>{brand.phone}</a>
           <a href={`mailto:${brand.email}`}>{brand.email}</a>
           <a href={`https://wa.me/${brand.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp</a>
-          <a href={brand.map} target="_blank" rel="noreferrer">View on map</a>
+          <a href={brand.map} target="_blank" rel="noreferrer">{t('footer.map')}</a>
           <button
             className="btn btn--camellia"
             type="button"
-            onClick={() => onAsk({ advisor: 'yes', topic: 'Travel agent partnership', message: 'I am a travel advisor and would like to work with you on a trip.' })}
+            onClick={() => onAsk({ advisor: 'yes', topic: t('agents.topic'), message: t('agents.message') })}
           >
-            Plan a trip with us
+            {t('agents.plan')}
           </button>
         </div>
       </div>
@@ -228,27 +236,29 @@ export function Agents({ onAsk }) {
 }
 
 export function Footer() {
+  const { t } = useTranslation()
   return (
     <footer className="footer">
-      <img className="footer__photo" src="/images/footer.jpg?v=grass" alt="Golden grassland on an open savanna" />
+      <img className="footer__photo" src="/images/footer.jpg?v=grass" alt={t('footer.photoAlt')} />
       <div className="wrap footer__inner">
         <div className="brand brand--footer">
           <img className="brand__mark" src="/images/logo-mark.png" alt="" />
           <span>{brand.name}</span>
         </div>
         <address>
-          <p className="footer__label">Address</p>
-          {brand.address.map((line) => <p key={line}>{line}</p>)}
-          <a href={brand.map} target="_blank" rel="noreferrer">View on map</a>
+          <p className="footer__label">{t('footer.address')}</p>
+          <p>{t('footer.city')}</p>
+          <p>{t('footer.country')}</p>
+          <a href={brand.map} target="_blank" rel="noreferrer">{t('footer.map')}</a>
         </address>
         <div>
-          <p className="footer__label">Contacts</p>
+          <p className="footer__label">{t('footer.contacts')}</p>
           <a href={brand.phoneHref}>{brand.phone}</a>
           <a href={`mailto:${brand.email}`}>{brand.email}</a>
           <a href={`https://wa.me/${brand.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp</a>
         </div>
         <div>
-          <p className="footer__label">Social</p>
+          <p className="footer__label">{t('footer.social')}</p>
           <ul className="socials">
             {socials.map((item) => (
               <li key={item.name}>
@@ -265,7 +275,7 @@ export function Footer() {
             ))}
           </ul>
         </div>
-        <p className="footer__legal">&copy; {new Date().getFullYear()} {brand.name}. All rights reserved.</p>
+        <p className="footer__legal">&copy; {t('footer.legal', { year: new Date().getFullYear(), name: brand.name })}</p>
       </div>
     </footer>
   )

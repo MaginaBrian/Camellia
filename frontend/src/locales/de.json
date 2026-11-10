@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "description": "Maßgeschneiderte Luxussafaris, kulturelle Begegnungen, Bergtouren und Strandaufenthalte, geplant von Camellia Horizons.",
+    "homeTitle": "Camellia Horizons | Private Reisen durch Ostafrika",
+    "philanthropyTitle": "Philanthropie | Camellia Horizons"
+  },
+  "lang": { "label": "Sprache" },
+  "nav": {
+    "home": "Camellia Horizons, Startseite",
+    "main": "Hauptmenü",
+    "destinations": "Reiseziele",
+    "journeys": "Reisen",
+    "philanthropy": "Philanthropie",
+    "when": "Wann reisen",
+    "planTrip": "Reise planen",
+    "menu": "Menü",
+    "speak": "Sprechen Sie mit uns",
+    "agentsLong": "Für Reisebüros",
+    "agentsShort": "Berater",
+    "countries": "Länder",
+    "places": "Orte",
+    "allJourneys": "Alle Reisen",
+    "destinationsPanel": "Reiseziele",
+    "journeysPanel": "Reisen"
+  },
+  "hero": {
+    "line1": "Das ist Ihr Afrika.",
+    "line2": "Ihre Geschichte.",
+    "line3": "Auf Ihre Art.",
+    "lede": "Maßgeschneiderte Luxussafaris, echte kulturelle Begegnungen, Bergtouren und idyllische Strandaufenthalte, sorgfältig zusammengestellt von einem kleinen Team von Reiseexperten und umgesetzt von lokalen Fachleuten mit jahrzehntelanger Erfahrung in Afrika.",
+    "plan": "Meine Reise planen",
+    "see": "Reisen ansehen",
+    "corner1": "Jenseits der Wildnis.",
+    "corner2": "Jenseits des Luxus.",
+    "aboutLabel": "Über uns"
+  },
+  "aboutLines": [
+    "Jede Reise richtet sich danach, wer mitkommt: die Parks, das Tempo und die Jahreszeit, und sie wird von Menschen geplant, die das Land kennen.",
+    "Guides, Camps und die tägliche Arbeit bleiben nahe an den Orten, die Sie besuchen."
+  ],
+  "destinations": {
+    "heading": "Kenia, Tansania und die Küste.",
+    "kenya": {
+      "name": "Kenia",
+      "alt": "Elefanten in der Masai Mara",
+      "credit": "Elefanten, Masai Mara. Foto: Ray in Manila, CC BY 2.0"
+    },
+    "tanzania": {
+      "name": "Tansania",
+      "alt": "Der Gipfel des Kilimandscharo über den Wolken",
+      "credit": "Kilimandscharo. Foto: Joel Peel, CC0"
+    },
+    "coast": {
+      "name": "Die Küste",
+      "alt": "Eine Dhau auf dem Wasser vor Sansibar",
+      "credit": "Dhau, Sansibar. Foto: Anton Zelenov, CC BY-SA 3.0",
+      "short": "die Küste"
+    }
+  },
+  "journeySets": {
+    "Safari": {
+      "alt": "Elefanten in der Masai Mara",
+      "credit": "Elefanten, Masai Mara. Foto: Ray in Manila, CC BY 2.0"
+    },
+    "Trek": {
+      "alt": "Der Gipfel des Kilimandscharo über den Wolken",
+      "credit": "Kilimandscharo. Foto: Joel Peel, CC0"
+    },
+    "Beach": {
+      "alt": "Eine Dhau auf dem Wasser vor Sansibar",
+      "credit": "Dhau, Sansibar. Foto: Anton Zelenov, CC BY-SA 3.0"
+    }
+  },
+  "categories": {
+    "All": "Alle",
+    "Safari": "Safari",
+    "Trek": "Trek",
+    "Beach": "Strand"
+  },
+  "journeysHead": {
+    "usual": "Die Reisen, die wir am häufigsten planen",
+    "intro": "Jede ist ein Anfang. Nennen Sie uns Ihre Daten und wer mitreist, und wir formen sie um.",
+    "in": "Reisen in {{place}}",
+    "coast": "Reisen an der Küste",
+    "category": "{{category}}-Reisen",
+    "all": "Alle Reisen",
+    "type": "Reiseart",
+    "days": "{{count}} Tage",
+    "from": "Ab {{price}} pro Person",
+    "ask": "Nach dieser Reise fragen",
+    "showMain": "Die wichtigsten Reisen zeigen",
+    "fineprint": "Die Preise sind Richtwerte für zwei Reisende im Doppelzimmer und ändern sich mit Saison und Camp. Reisefotos: Ray in Manila; Charles J. Sharp; Bernard Dupont; Joel Peel; Andy Witchger; Anton Zelenov. Über Wikimedia Commons."
+  },
+  "journeys": {
+    "northern-circuit": {
+      "title": "Nördliche Runde, privat geführt",
+      "blurb": "Die Elefanten von Tarangire, der Boden des Ngorongoro-Kraters und die offene Serengeti, mit einem privaten Fahrzeug und einem Guide durchgehend."
+    },
+    "migration-season": {
+      "title": "Der großen Wanderung folgen",
+      "blurb": "Camps dort, wo die Herden in Ihrem Reisemonat sind, von den Kalbeebenen bis zu den Flussüberquerungen."
+    },
+    "short-safari": {
+      "title": "Vier Tage, ein großer Park",
+      "blurb": "Eine kürzere Safari, die tief in einen einzigen Park geht, statt mehrere im Eiltempo abzuhaken."
+    },
+    "kilimanjaro-lemosho": {
+      "title": "Der Kilimandscharo über die Lemosho-Route",
+      "blurb": "Der längere Anstieg mit Zeit zur Akklimatisierung, einem vollständigen Bergteam und einem Verbandskasten bei jedem Aufstieg."
+    },
+    "meru-warmup": {
+      "title": "Der Mount Meru, danach die Safari",
+      "blurb": "Gehen Sie zuerst am Kraterrand des Meru entlang und dann in die Parks, mit kräftigen Beinen und weniger Menschen hinter Ihnen."
+    },
+    "island-stay": {
+      "title": "Strandaufenthalt nach der Savanne",
+      "blurb": "Fünf ruhige Tage an der Küste: ein Boutique-Aufenthalt, eine Fahrt mit der Dhau und sonst nichts, was Sie tun müssen."
+    }
+  },
+  "why": {
+    "heading": "Warum mit {{name}} reisen",
+    "intro": "Die Reiseroute baut dasselbe Team, das sie auch durchführt. Das Tempo bestimmen Sie, und die Art, wie wir planen, soll die Orte, die Sie besuchen, besser hinterlassen.",
+    "planner": "Mit einem Planer sprechen",
+    "items": [
+      { "title": "Vor Ort geplant", "text": "Ihre Reiseroute baut dasselbe Team, das sie auch durchführt, deshalb geht zwischen Büros nichts verloren." },
+      { "title": "Private Fahrzeuge und Guides", "text": "Das Fahrzeug gehört Ihnen. Sie bestimmen das Tempo, und Ihr Guide weiß, wann er bleibt und wann er weiterfährt." },
+      { "title": "Reisen nach Wunsch", "text": "Safaris, Treks und Zeit an der Küste lassen sich an Daten, Tempo, Kinder und Feiern anpassen." },
+      { "title": "Ehrlicher Rat zu den Jahreszeiten", "text": "Wir sagen Ihnen, wie jeder Monat wirklich ist, auch die ruhigen und die nassen." },
+      { "title": "Ein Schalter, den Sie erreichen", "text": "Ausgebildete Guides, geprüfte Camps und ein Schalter in Nairobi, der die Reise mit Ihnen begleitet." },
+      { "title": "Eine Reise, die etwas zurückgibt", "text": "Wildtiere, Lebensgrundlagen, Kultur und die Unterstützung von Kindern mit besonderen Bedürfnissen, einschließlich Kindern mit Down-Syndrom, gehören dazu, wie wir hoffen, dass jede Reise etwas zurückgibt." }
+    ]
+  },
+  "agents": {
+    "kicker": "Für Reiseberater",
+    "heading": "Ihr Team vor Ort in Ostafrika.",
+    "lede": "Der Kunde bleibt bei Ihnen. Wir organisieren Fahrzeuge, Guides und Camps, und die Reise kann unter Ihrem Namen laufen.",
+    "points": [
+      "Preise und Reiserouten unter Ihrer eigenen Marke",
+      "Bodenservice, Fahrzeuge und Guides inklusive",
+      "Ein namentlicher Kontakt, der schnell antwortet",
+      "Betreuung für Ihre Kunden rund um die Uhr"
+    ],
+    "desk": "Sprechen Sie mit dem Schalter in Nairobi",
+    "plan": "Eine Reise mit uns planen",
+    "topic": "Partnerschaft mit Reisebüros",
+    "message": "Ich bin Reiseberater und möchte mit Ihnen an einer Reise arbeiten."
+  },
+  "philanthropy": {
+    "kicker": "Philanthropie",
+    "summary": "Kenia entdecken. Die Menschlichkeit feiern. Einen Unterschied machen.",
+    "title": ["Jenseits der Safaris.", "Jenseits des Naturschutzes.", "Leben verändern."],
+    "lede": [
+      "Bei Camellia Horizons soll jede Reise eine positive Spur hinterlassen: Wildtiere schützen, Gemeinschaften stärken, Kulturen bewahren und Kinder mit besonderen Bedürfnissen unterstützen. Die größten Reisen sind die, die die Welt für alle ein wenig besser hinterlassen.",
+      "Eine Reise mit uns ist mehr als eine unvergessliche Safari. Sie ist auch eine Chance, im Leben von Gemeinschaften in Kenia einen echten Unterschied zu machen."
+    ],
+    "ask": "Fragen Sie, wie eine Reise etwas zurückgibt",
+    "askTopic": "Wie meine Reise etwas zurückgeben kann",
+    "askMessage": "Ich möchte wissen, wie diese Reise Gemeinschaften in Kenia etwas zurückgeben kann, einschließlich Kindern mit besonderen Bedürfnissen und Kindern mit Down-Syndrom.",
+    "bannerAlt": "Gnus und Zebras überqueren einen Fluss in der Mara",
+    "photoCredit": "Foto der Flussüberquerung: Charles J. Sharp, CC BY-SA 4.0, über Wikimedia Commons.",
+    "sections": [
+      {
+        "kicker": "Jede Reise schafft eine Gelegenheit, etwas zurückzugeben",
+        "title": "Etwas an unsere Gemeinschaften zurückgeben",
+        "text": [
+          "Die Schönheit des Reisens liegt in den Orten, die Sie entdecken, und in den Leben, die Sie unterwegs berühren.",
+          "Unser Einsatz für verantwortungsvolles Reisen geht über den Schutz der Wildtiere und des natürlichen Erbes Kenias hinaus. Ebenso setzen wir uns dafür ein, lokale Gemeinschaften zu unterstützen, an der Seite verletzlicher Familien zu stehen und Möglichkeiten für Kinder und Menschen mit Behinderung zu schaffen."
+        ]
+      },
+      {
+        "kicker": "Jedes Kind verdient eine Chance zu leuchten",
+        "title": "Kinder mit besonderen Bedürfnissen unterstützen",
+        "text": [
+          "Wir wollen einen positiven Unterschied im Leben von Kindern mit besonderen Bedürfnissen machen, einschließlich Kindern mit Down-Syndrom, Autismus und anderen Entwicklungs- oder Körperbehinderungen.",
+          "Jedes Kind verdient Liebe, Würde, Zugehörigkeit und die Chance, aufzublühen. Jedes Kind hat eigene Fähigkeiten, Träume und ein eigenes Potenzial. Wir hoffen, eine Zukunft mitzugestalten, in der Kinder aller Fähigkeiten geschätzt, unterstützt und durch Lernen, Zugehörigkeit und persönliches Wachstum Raum zum Aufblühen haben.",
+          "Diese Hoffnung umfasst inklusive Bildung, die Mittel, die eine Familie braucht, soziale Teilhabe und stärkere Familien. Wie eine bestimmte Reise dazu beitragen kann, erklären wir, wenn Sie anfragen."
+        ]
+      },
+      {
+        "title": "Familien und lokale Gemeinschaften stärken",
+        "text": [
+          "Unsere Vorstellung reicht auch zu Familien, die sozialen und wirtschaftlichen Herausforderungen gegenüberstehen. Wir hoffen, Lebensgrundlagen zu stärken, den Zugang zu Bildung zu erweitern und von der Gemeinschaft getragene Vorhaben zu unterstützen, die dauerhafte Veränderung schaffen."
+        ]
+      },
+      {
+        "title": "Reisen mit einem Sinn",
+        "text": [
+          "Wenn Sie Kenia mit Camellia Horizons entdecken, werden Sie Teil einer Reise, die Menschen ebenso wertschätzt wie Orte.",
+          "Wir glauben, dass Tourismus eine Kraft zum Guten sein kann: Reisende mit Gemeinschaften verbinden und Mitgefühl, Verständnis und einen sinnvollen Beitrag fördern."
+        ],
+        "close": "Kenia entdecken. Die Menschlichkeit feiern. Einen Unterschied machen."
+      }
+    ],
+    "pillars": [
+      { "title": "Wildtiere und Naturschutz", "text": "Die Wildtiere Kenias und die natürlichen Lebensräume schützen, die sie tragen." },
+      { "title": "Stärkung der Gemeinschaft", "text": "Lokale Lebensgrundlagen und Möglichkeiten unterstützen, die bleiben können." },
+      { "title": "Bewahrung der Kultur", "text": "Traditionen feiern und das Erbe der Orte schützen, die Sie besuchen." },
+      { "title": "Besondere Bedürfnisse und Teilhabe", "text": "Ein Einsatz für Würde, Teilhabe und Chancen für Kinder aller Fähigkeiten, einschließlich Kindern mit Down-Syndrom." }
+    ]
+  },
+  "seasons": {
+    "heading": "Wann reisen",
+    "intro": "Wählen Sie einen Monat, um zu sehen, wie Wetter, Andrang und Wildtiere gewöhnlich sind. Die Muster verschieben sich von Jahr zu Jahr, deshalb bestätigen wir die Einzelheiten, wenn wir Ihre Reise planen.",
+    "month": "Monat",
+    "weather": "Wetter",
+    "visitors": "Besucher"
+  },
+  "months": [
+    { "m": "Jan", "climate": "Trocken und warm", "crowds": "Mäßig", "note": "Auf den südlichen Ebenen beginnt die Kalbezeit, Löwen und Geparden kommen den Jungen nahe." },
+    { "m": "Feb", "climate": "Heiß und meist trocken", "crowds": "Belebt", "note": "Höhepunkt der Kalbezeit, die Herden über die Kurzgrasebenen verteilt." },
+    { "m": "Mär", "climate": "Die Regenfälle kommen", "crowds": "Ruhig", "note": "Grüne Landschaften und gute Preise. Schauer fallen meist am Nachmittag." },
+    { "m": "Apr", "climate": "Lange Regenfälle", "crowds": "Ruhig", "note": "Der nasseste Abschnitt. Einige Camps schließen, die offenen bieten guten Wert und leere Pisten." },
+    { "m": "Mai", "climate": "Die Regenfälle lassen nach", "crowds": "Ruhig", "note": "Üppige Landschaft, ausgezeichnete Vogelwelt und Herden, die nach Nordwesten ziehen." },
+    { "m": "Jun", "climate": "Trocken und kühl", "crowds": "Mäßig", "note": "Die Pisten trocknen, und die Herden ziehen durch den westlichen Korridor." },
+    { "m": "Jul", "climate": "Trocken und kühl", "crowds": "Belebt", "note": "Die Herden erreichen die nördlichen Flüsse, und Überquerungen werden möglich." },
+    { "m": "Aug", "climate": "Trocken", "crowds": "Belebt", "note": "Stärkster Safarimonat. Buchen Sie früh für die besten Camps und die besten Übergänge." },
+    { "m": "Sep", "climate": "Trocken", "crowds": "Belebt", "note": "Die Überquerungen gehen weiter, das Gras ist kurz, Raubtiere sind leicht zu beobachten." },
+    { "m": "Okt", "climate": "Trocken, wärmer", "crowds": "Mäßig", "note": "Weniger Fahrzeuge an den nördlichen Flüssen, bevor die kurzen Regenfälle beginnen." },
+    { "m": "Nov", "climate": "Kurze Regenfälle", "crowds": "Ruhig", "note": "Die Herden ziehen wieder nach Süden. Kurze Gewitter, frisches Grün und niedrigere Preise." },
+    { "m": "Dez", "climate": "Warm, einzelne Schauer", "crowds": "Belebt", "note": "Die Festtage bringen mehr Menschen, die Tierwelt der südlichen Ebenen ist aber ausgezeichnet." }
+  ],
+  "footer": {
+    "photoAlt": "Goldenes Grasland in einer offenen Savanne",
+    "address": "Adresse",
+    "city": "Lavington, Nairobi",
+    "country": "Kenia",
+    "contacts": "Kontakt",
+    "social": "Soziale Medien",
+    "map": "Auf der Karte ansehen",
+    "legal": "{{year}} {{name}}. Alle Rechte vorbehalten."
+  },
+  "enquire": {
+    "close": "Schließen",
+    "for": "Anfrage für {{place}}",
+    "thanks": "Danke. Wir haben Ihre Anfrage.",
+    "reply": "Ein Planer antwortet innerhalb eines Werktags per E-Mail.",
+    "title": "Diese Reise planen",
+    "first": "Vorname",
+    "last": "Nachname",
+    "phone": "Telefon oder WhatsApp",
+    "email": "E-Mail",
+    "advisor": "Sind Sie Reiseberater?",
+    "no": "Nein",
+    "yes": "Ja",
+    "country": "Land wählen",
+    "eastAfrica": "Ostafrika",
+    "place": "Ort wählen",
+    "anyPlace": "Beliebiger Ort",
+    "countryFirst": "Wählen Sie zuerst ein Land",
+    "month": "Reisemonat",
+    "unsure": "Noch unsicher",
+    "travellers": "Reisende",
+    "about": "Erzählen Sie uns von der Reise",
+    "placeholder": "Daten, wer mitreist und was Sie sehen möchten.",
+    "consent": "Ich bin einverstanden, dass {{name}} diese Angaben nutzt, um auf diese Reise zu antworten.",
+    "send": "Meine Anfrage senden",
+    "sending": "Wird gesendet...",
+    "chat": "Lieber schreiben? Schreiben Sie uns auf WhatsApp",
+    "planMessage": "Ich möchte {{title}} planen.",
+    "advisorPrefix": "Reiseberater. ",
+    "fallbackAlt": "Ein männlicher Löwe ruht im Gras der Serengeti",
+    "fallbackCredit": "Löwe, Serengeti. Foto: Giles Laurent, CC BY-SA 4.0",
+    "errors": {
+      "first": "Geben Sie Ihren Vornamen ein.",
+      "last": "Geben Sie Ihren Nachnamen ein.",
+      "message": "Erzählen Sie uns ein wenig von der Reise (mindestens 10 Zeichen).",
+      "consent": "Bitte bestätigen Sie, dass wir zu dieser Reise antworten dürfen.",
+      "name": "Geben Sie Ihren Namen ein.",
+      "email": "Geben Sie eine gültige E-Mail-Adresse ein."
+    }
+  },
+  "errors": {
+    "network": "Wir konnten den Server nicht erreichen. Prüfen Sie Ihre Verbindung oder schreiben Sie uns auf WhatsApp.",
+    "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "rate": "Zu viele Anfragen. Bitte versuchen Sie es später erneut."
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "description": "Tailor-made luxury safaris, cultural encounters, mountain treks and beach escapes, planned by Camellia Horizons.",
+    "homeTitle": "Camellia Horizons | Private journeys across East Africa",
+    "philanthropyTitle": "Philanthropy | Camellia Horizons"
+  },
+  "lang": {
+    "label": "Language"
+  },
+  "nav": {
+    "home": "Camellia Horizons, home",
+    "main": "Main",
+    "destinations": "Destinations",
+    "journeys": "Journeys",
+    "philanthropy": "Philanthropy",
+    "when": "When to go",
+    "planTrip": "Plan a trip",
+    "menu": "Menu",
+    "speak": "Speak to us",
+    "agentsLong": "For travel agents",
+    "agentsShort": "Advisors",
+    "countries": "Countries",
+    "places": "Places",
+    "allJourneys": "All journeys",
+    "destinationsPanel": "Destinations",
+    "journeysPanel": "Journeys"
+  },
+  "hero": {
+    "line1": "This is your Africa.",
+    "line2": "Your story.",
+    "line3": "Your way.",
+    "lede": "Tailor-made luxury safaris, authentic cultural encounters, mountain treks and idyllic beach escapes — thoughtfully curated by a small team of destination experts and brought to life by local specialists with decades of experience across Africa.",
+    "plan": "Plan my journey",
+    "see": "See journeys",
+    "corner1": "Beyond the wild.",
+    "corner2": "Beyond luxury.",
+    "aboutLabel": "About"
+  },
+  "aboutLines": [
+    "Each journey is shaped around who is coming: the parks, the pace and the time of year, and it is planned by people who know the ground.",
+    "Guides, camps and the day-to-day work stay near the places you visit."
+  ],
+  "destinations": {
+    "heading": "Kenya, Tanzania and the coast.",
+    "kenya": {
+      "name": "Kenya",
+      "alt": "Elephants in the Maasai Mara",
+      "credit": "Elephants, Maasai Mara. Photo: Ray in Manila, CC BY 2.0"
+    },
+    "tanzania": {
+      "name": "Tanzania",
+      "alt": "The summit of Kilimanjaro above the clouds",
+      "credit": "Kilimanjaro. Photo: Joel Peel, CC0"
+    },
+    "coast": {
+      "name": "The coast",
+      "alt": "A dhow on the water at Zanzibar",
+      "credit": "Dhow, Zanzibar. Photo: Anton Zelenov, CC BY-SA 3.0",
+      "short": "the coast"
+    }
+  },
+  "journeySets": {
+    "Safari": {
+      "alt": "Elephants in the Maasai Mara",
+      "credit": "Elephants, Maasai Mara. Photo: Ray in Manila, CC BY 2.0"
+    },
+    "Trek": {
+      "alt": "The summit of Kilimanjaro above the clouds",
+      "credit": "Kilimanjaro. Photo: Joel Peel, CC0"
+    },
+    "Beach": {
+      "alt": "A dhow on the water at Zanzibar",
+      "credit": "Dhow, Zanzibar. Photo: Anton Zelenov, CC BY-SA 3.0"
+    }
+  },
+  "categories": {
+    "All": "All",
+    "Safari": "Safari",
+    "Trek": "Trek",
+    "Beach": "Beach"
+  },
+  "journeysHead": {
+    "usual": "Journeys we plan most often",
+    "intro": "Every one is a starting point. Tell us your dates and who is travelling, and we will reshape it.",
+    "in": "Journeys in {{place}}",
+    "coast": "Journeys on the coast",
+    "category": "{{category}} journeys",
+    "all": "All journeys",
+    "type": "Journey type",
+    "days": "{{count}} days",
+    "from": "From {{price}} per person",
+    "ask": "Ask about this journey",
+    "showMain": "Show the main journeys",
+    "fineprint": "Prices are guides for two travellers sharing and change with season and camp choice. Journey photographs: Ray in Manila; Charles J. Sharp; Bernard Dupont; Joel Peel; Andy Witchger; Anton Zelenov. Via Wikimedia Commons."
+  },
+  "journeys": {
+    "northern-circuit": {
+      "title": "Northern circuit, privately guided",
+      "blurb": "Tarangire's elephants, the Ngorongoro Crater floor and the open Serengeti, with a private vehicle and one guide throughout."
+    },
+    "migration-season": {
+      "title": "Following the Great Migration",
+      "blurb": "Camps placed where the herds are for your month of travel, from calving plains to river crossings."
+    },
+    "short-safari": {
+      "title": "Four days, one great park",
+      "blurb": "A shorter safari that goes deep into a single park instead of rushing through several."
+    },
+    "kilimanjaro-lemosho": {
+      "title": "Kilimanjaro by the Lemosho route",
+      "blurb": "The longer approach with time to acclimatise, a full mountain crew and a medical kit on every climb."
+    },
+    "meru-warmup": {
+      "title": "Mount Meru, then the safari",
+      "blurb": "Walk Meru's crater rim first, then head into the parks with strong legs and fewer crowds behind you."
+    },
+    "island-stay": {
+      "title": "Beach stay after the bush",
+      "blurb": "Five unhurried days on the coast: a boutique stay, a dhow trip and nothing else you have to do."
+    }
+  },
+  "why": {
+    "heading": "Why travel with {{name}}",
+    "intro": "The itinerary is built by the same team that runs it. The pace is yours, and the way we plan is meant to leave the places you visit better cared for.",
+    "planner": "Speak to a planner",
+    "items": [
+      { "title": "Planned on the ground", "text": "Your itinerary is built by the same team that runs it, so nothing is lost between offices." },
+      { "title": "Private vehicles and guides", "text": "The vehicle is yours. You set the pace, and your guide knows when to stay and when to move." },
+      { "title": "Journeys made to order", "text": "Safaris, treks and time on the coast can be reshaped around dates, pace, children and celebrations." },
+      { "title": "Honest seasons advice", "text": "We tell you what each month is really like, including the quiet and wet ones." },
+      { "title": "A desk you can reach", "text": "Trained guides, vetted camps, and a Nairobi desk that stays on the trip with you." },
+      { "title": "Travel that gives back", "text": "Wildlife, community livelihoods, culture, and support for children with special needs, including children with Down syndrome, are part of how we hope each journey gives back." }
+    ]
+  },
+  "agents": {
+    "kicker": "For travel advisors",
+    "heading": "Your ground team in East Africa.",
+    "lede": "You keep the client. We arrange the vehicles, guides and camps, and the trip can run under your name.",
+    "points": [
+      "Rates and itineraries under your own branding",
+      "Ground handling, vehicles and guides included",
+      "A named contact who answers quickly",
+      "Support for your clients around the clock"
+    ],
+    "desk": "Talk to the Nairobi desk",
+    "plan": "Plan a trip with us",
+    "topic": "Travel agent partnership",
+    "message": "I am a travel advisor and would like to work with you on a trip."
+  },
+  "philanthropy": {
+    "kicker": "Philanthropy",
+    "summary": "Explore Kenya. Celebrate humanity. Make a difference.",
+    "title": ["Beyond safaris.", "Beyond conservation.", "Changing lives."],
+    "lede": [
+      "At Camellia Horizons, every journey should leave a positive mark: protecting wildlife, empowering communities, preserving cultures, and supporting children with special needs. The greatest journeys are the ones that leave the world a little better for everyone.",
+      "A journey with us is about more than an unforgettable safari. It is also a chance to make a meaningful difference in the lives of communities across Kenya."
+    ],
+    "ask": "Ask how a trip gives back",
+    "askTopic": "How my trip can give back",
+    "askMessage": "I would like to know how this trip can give back to communities in Kenya, including children with special needs and children with Down syndrome.",
+    "bannerAlt": "Wildebeest and zebra crossing a river in the Mara",
+    "photoCredit": "River crossing photograph: Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons.",
+    "sections": [
+      {
+        "kicker": "Every journey creates an opportunity to give back",
+        "title": "Giving back to our communities",
+        "text": [
+          "The beauty of travel lies in the places you explore and in the lives you touch along the way.",
+          "Our commitment to responsible travel goes beyond protecting wildlife and preserving Kenya’s natural heritage. We are equally committed to supporting local communities, standing with vulnerable families, and creating opportunities for children and people living with disabilities."
+        ]
+      },
+      {
+        "kicker": "Every child deserves a chance to shine",
+        "title": "Supporting children with special needs",
+        "text": [
+          "We are committed to making a positive difference in the lives of children with special needs, including children with Down syndrome, autism, and other developmental or physical disabilities.",
+          "Every child deserves love, dignity, inclusion, and the chance to thrive. Each child has abilities, dreams and potential of their own. We hope to help create a future where children of all abilities are valued, supported, and given room to flourish, through learning, belonging and personal growth.",
+          "That hope includes inclusive education, the resources a family needs, social inclusion, and stronger families. How a particular journey can contribute is something we explain when you enquire."
+        ]
+      },
+      {
+        "title": "Empowering families and local communities",
+        "text": [
+          "Our vision also reaches families facing social and economic challenges. We hope to strengthen livelihoods, widen access to education, and support community-led efforts that create lasting change."
+        ]
+      },
+      {
+        "title": "Travel with purpose",
+        "text": [
+          "When you explore Kenya with Camellia Horizons, you become part of a journey that values people as much as places.",
+          "We believe tourism can be a force for good: connecting travellers with communities, and encouraging compassion, understanding and a meaningful contribution."
+        ],
+        "close": "Explore Kenya. Celebrate humanity. Make a difference."
+      }
+    ],
+    "pillars": [
+      { "title": "Wildlife and conservation", "text": "Protecting Kenya’s wildlife and the natural habitats that sustain it." },
+      { "title": "Community empowerment", "text": "Supporting local livelihoods and opportunities that can last." },
+      { "title": "Cultural preservation", "text": "Celebrating traditions and protecting the heritage of the places you visit." },
+      { "title": "Special needs and inclusion", "text": "A commitment to dignity, inclusion and opportunity for children of all abilities, including children with Down syndrome." }
+    ]
+  },
+  "seasons": {
+    "heading": "When to go",
+    "intro": "Pick a month to see what the weather, the crowds and the wildlife are usually like. Patterns shift from year to year, so we confirm details when we plan your trip.",
+    "month": "Month",
+    "weather": "Weather",
+    "visitors": "Visitors"
+  },
+  "months": [
+    { "m": "Jan", "climate": "Dry and warm", "crowds": "Moderate", "note": "Calving begins on the southern plains, which draws lions and cheetahs close to the young." },
+    { "m": "Feb", "climate": "Hot and mostly dry", "crowds": "Busy", "note": "Peak of the calving season, with the herds spread across the short-grass plains." },
+    { "m": "Mar", "climate": "Rains arriving", "crowds": "Quiet", "note": "Green landscapes and good rates. Showers tend to come in the afternoon." },
+    { "m": "Apr", "climate": "Long rains", "crowds": "Quiet", "note": "The wettest stretch. Some camps close, but those open offer great value and empty roads." },
+    { "m": "May", "climate": "Rains easing", "crowds": "Quiet", "note": "Lush scenery, excellent birdlife and herds beginning to move north-west." },
+    { "m": "Jun", "climate": "Dry and cool", "crowds": "Moderate", "note": "Roads dry out and the herds travel through the western corridor." },
+    { "m": "Jul", "climate": "Dry and cool", "crowds": "Busy", "note": "Herds reach the northern rivers and river crossings become possible." },
+    { "m": "Aug", "climate": "Dry", "crowds": "Busy", "note": "Peak safari month. Book early for the best camps and the best crossing locations." },
+    { "m": "Sep", "climate": "Dry", "crowds": "Busy", "note": "Crossings continue and the grass is short, so predators are easy to watch." },
+    { "m": "Oct", "climate": "Dry, warming", "crowds": "Moderate", "note": "Fewer vehicles at the northern rivers before the short rains begin." },
+    { "m": "Nov", "climate": "Short rains", "crowds": "Quiet", "note": "Herds head south again. Brief storms, fresh green plains and lower prices." },
+    { "m": "Dec", "climate": "Warm, some showers", "crowds": "Busy", "note": "Festive season brings crowds, but wildlife on the southern plains is excellent." }
+  ],
+  "footer": {
+    "photoAlt": "Golden grassland on an open savanna",
+    "address": "Address",
+    "city": "Lavington, Nairobi",
+    "country": "Kenya",
+    "contacts": "Contacts",
+    "social": "Social",
+    "map": "View on map",
+    "legal": "{{year}} {{name}}. All rights reserved."
+  },
+  "enquire": {
+    "close": "Close",
+    "for": "Enquire for {{place}}",
+    "thanks": "Thank you. We have your request.",
+    "reply": "A planner will reply by email within one working day.",
+    "title": "Plan this journey",
+    "first": "First name",
+    "last": "Last name",
+    "phone": "Phone or WhatsApp",
+    "email": "Email",
+    "advisor": "Are you a travel advisor?",
+    "no": "No",
+    "yes": "Yes",
+    "country": "Choose a country",
+    "eastAfrica": "East Africa",
+    "place": "Choose a place",
+    "anyPlace": "Any place",
+    "countryFirst": "Choose a country first",
+    "month": "Travel month",
+    "unsure": "Not sure yet",
+    "travellers": "Travellers",
+    "about": "Tell us about the trip",
+    "placeholder": "Dates, who is travelling, and what you hope to see.",
+    "consent": "I agree that {{name}} may use these details to reply about this trip.",
+    "send": "Send my request",
+    "sending": "Sending...",
+    "chat": "Prefer to chat? Message us on WhatsApp",
+    "planMessage": "I would like to plan {{title}}.",
+    "advisorPrefix": "Travel advisor. ",
+    "fallbackAlt": "A male lion resting in the grass of the Serengeti",
+    "fallbackCredit": "Lion, Serengeti. Photo: Giles Laurent, CC BY-SA 4.0",
+    "errors": {
+      "first": "Enter your first name.",
+      "last": "Enter your last name.",
+      "message": "Tell us a little about the trip (at least 10 characters).",
+      "consent": "Please confirm we may reply about this trip.",
+      "name": "Enter your name.",
+      "email": "Enter a valid email address."
+    }
+  },
+  "errors": {
+    "network": "We could not reach the server. Check your connection or message us on WhatsApp.",
+    "generic": "Something went wrong. Please try again.",
+    "rate": "Too many requests. Please try again later."
+  }
+}

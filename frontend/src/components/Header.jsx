@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import journeys from '../../../backend/journeys.json'
+import { languages } from '../i18n.js'
 import { brand, destinations } from '../content.js'
 
 const journeySets = [
@@ -24,6 +26,7 @@ const journeySets = [
 ]
 
 export default function Header({ view, onPlan, onPick, onAskJourney }) {
+  const { t, i18n } = useTranslation()
   const [open, setOpen] = useState(false)
   const [destOpen, setDestOpen] = useState(false)
   const [journeysOpen, setJourneysOpen] = useState(false)
@@ -85,11 +88,12 @@ export default function Header({ view, onPlan, onPick, onAskJourney }) {
     <header className="header">
       <div className="header__bar">
         <div className="wrap header__inner">
-        <a className="brand" href="#top" aria-label={`${brand.name}, home`} onClick={closeMenus}>
+        <a className="brand" href="#top" aria-label={t('nav.home')} onClick={closeMenus}>
           <img className="brand__mark" src="/images/logo-mark.png" alt="" />
           <span>{brand.name}</span>
         </a>
-        <nav className={`nav ${open ? 'nav--open' : ''}`} aria-label="Main">
+        <div className="header__end">
+        <nav className={`nav ${open ? 'nav--open' : ''}`} aria-label={t('nav.main')}>
           <button
             className="nav__link"
             type="button"
@@ -97,7 +101,7 @@ export default function Header({ view, onPlan, onPick, onAskJourney }) {
             aria-controls="dest-panel"
             onClick={() => { setDestOpen((v) => !v); setJourneysOpen(false); setOpen(false) }}
           >
-            Destinations
+            {t('nav.destinations')}
           </button>
           <button
             className="nav__link"
@@ -106,39 +110,52 @@ export default function Header({ view, onPlan, onPick, onAskJourney }) {
             aria-controls="journey-panel"
             onClick={() => { setJourneysOpen((v) => !v); setDestOpen(false); setOpen(false) }}
           >
-            Journeys
+            {t('nav.journeys')}
           </button>
-          <a href="#philanthropy" aria-current={view === 'philanthropy' ? 'page' : undefined} onClick={closeMenus}>Philanthropy</a>
-          <a href="#seasons" onClick={closeMenus}>When to go</a>
-          <button className="btn btn--camellia nav__cta" type="button" onClick={() => plan({})}>Plan a trip</button>
+          <a href="#philanthropy" aria-current={view === 'philanthropy' ? 'page' : undefined} onClick={closeMenus}>{t('nav.philanthropy')}</a>
+          <a href="#seasons" onClick={closeMenus}>{t('nav.when')}</a>
+          <button className="btn btn--camellia nav__cta" type="button" onClick={() => plan({})}>{t('nav.planTrip')}</button>
         </nav>
-        <button className="menu-btn" aria-expanded={open} aria-label="Menu" onClick={() => { setOpen((o) => !o); setDestOpen(false); setJourneysOpen(false) }}>
+        <label className="lang">
+          <span className="sr-only">{t('lang.label')}</span>
+          <select
+            aria-label={t('lang.label')}
+            value={i18n.language.slice(0, 2)}
+            onChange={(e) => i18n.changeLanguage(e.target.value)}
+          >
+            {languages.map((language) => (
+              <option key={language.code} value={language.code}>{language.label}</option>
+            ))}
+          </select>
+        </label>
+        <button className="menu-btn" aria-expanded={open} aria-label={t('nav.menu')} onClick={() => { setOpen((o) => !o); setDestOpen(false); setJourneysOpen(false) }}>
           <span /><span />
         </button>
+        </div>
         </div>
       </div>
       <div className="util">
         <div className="wrap util__inner">
           <a className="util__phone" href={brand.phoneHref}>
-            <span className="util__speak">Speak to us</span> {brand.phone}
+            <span className="util__speak">{t('nav.speak')}</span> {brand.phone}
           </a>
           <div className="util__right">
             <a href="#agents" onClick={closeMenus}>
-              <span className="util__long">For travel agents</span>
-              <span className="util__short">Advisors</span>
+              <span className="util__long">{t('nav.agentsLong')}</span>
+              <span className="util__short">{t('nav.agentsShort')}</span>
             </a>
             <a className="util__email" href={`mailto:${brand.email}`}>{brand.email}</a>
           </div>
         </div>
       </div>
       {destOpen && (
-        <div className="dest" id="dest-panel" role="region" aria-label="Destinations">
+        <div className="dest" id="dest-panel" role="region" aria-label={t('nav.destinationsPanel')}>
           <figure className="dest__photo">
-            <img src={current.image} alt={current.alt} />
-            <figcaption>{current.credit}</figcaption>
+            <img src={current.image} alt={t(`destinations.${current.id}.alt`)} />
+            <figcaption>{t(`destinations.${current.id}.credit`)}</figcaption>
           </figure>
           <div className="dest__col">
-            <p className="kicker">Countries</p>
+            <p className="kicker">{t('nav.countries')}</p>
             <ul>
               {destinations.map((d) => (
                 <li key={d.id}>
@@ -149,14 +166,14 @@ export default function Header({ view, onPlan, onPick, onAskJourney }) {
                     onFocus={() => setActive(d.id)}
                     onClick={() => pick(d.id, '')}
                   >
-                    {d.name}
+                    {t(`destinations.${d.id}.name`)}
                   </button>
                 </li>
               ))}
             </ul>
           </div>
           <div className="dest__col">
-            <p className="kicker">Places</p>
+            <p className="kicker">{t('nav.places')}</p>
             <ul>
               {current.places.map((place) => (
                 <li key={place}>
@@ -168,19 +185,19 @@ export default function Header({ view, onPlan, onPick, onAskJourney }) {
         </div>
       )}
       {journeysOpen && (
-        <div className="dest dest--journeys" id="journey-panel" role="region" aria-label="Journeys">
+        <div className="dest dest--journeys" id="journey-panel" role="region" aria-label={t('nav.journeysPanel')}>
           <figure className="dest__photo">
-            <img src={currentSet.image} alt={currentSet.alt} />
-            <figcaption>{currentSet.credit}</figcaption>
+            <img src={currentSet.image} alt={t(`journeySets.${currentSet.id}.alt`)} />
+            <figcaption>{t(`journeySets.${currentSet.id}.credit`)}</figcaption>
           </figure>
           {journeySets.map((set) => (
             <div className="dest__col" key={set.id} onMouseEnter={() => setJourneyCat(set.id)}>
-              <button type="button" className="kicker kicker--btn" onClick={() => pickCategory(set.id)}>{set.id}</button>
+              <button type="button" className="kicker kicker--btn" onClick={() => pickCategory(set.id)}>{t(`categories.${set.id}`)}</button>
               <ul>
                 {journeys.filter((journey) => journey.category === set.id).map((journey) => (
                   <li key={journey.id}>
                     <button type="button" onFocus={() => setJourneyCat(set.id)} onClick={() => askJourney(journey)}>
-                      {journey.title}
+                      {t(`journeys.${journey.id}.title`)}
                     </button>
                   </li>
                 ))}
@@ -188,7 +205,7 @@ export default function Header({ view, onPlan, onPick, onAskJourney }) {
             </div>
           ))}
           <div className="dest__foot">
-            <button type="button" className="link" onClick={() => pickCategory('all')}>All journeys</button>
+            <button type="button" className="link" onClick={() => pickCategory('all')}>{t('nav.allJourneys')}</button>
           </div>
         </div>
       )}

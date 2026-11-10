@@ -6,8 +6,9 @@ Endpoints
   POST /api/inquiries    saves a trip request from the website form
   GET  /api/inquiries    lists saved requests (needs X-Admin-Token header)
 
-In production, `npm run build` in ../frontend creates ../frontend/dist
-and this app serves it too, so one process runs the whole site.
+In production the built site is served from public_html, next to the
+account home. Locally, `npm run build` in ../frontend creates
+../frontend/dist and this app serves that instead.
 """
 import json
 import os
@@ -20,7 +21,24 @@ from pathlib import Path
 from flask import Flask, jsonify, request, send_from_directory
 
 BASE = Path(__file__).parent
-DIST = (BASE.parent / "frontend" / "dist").resolve()
+
+
+def site_directory():
+    """Folder that holds index.html, assets, and images.
+
+    On the server this is public_html. Set DIST_DIR to override.
+    Locally it falls back to frontend/dist.
+    """
+    configured = os.environ.get("DIST_DIR", "").strip()
+    if configured:
+        return Path(configured).expanduser().resolve()
+    public_html = (BASE.parent.parent / "public_html").resolve()
+    if (public_html / "index.html").is_file():
+        return public_html
+    return (BASE.parent / "frontend" / "dist").resolve()
+
+
+DIST = site_directory()
 DB_PATH = os.environ.get("DB_PATH", str(BASE / "inquiries.db"))
 ADMIN_TOKEN = os.environ.get("ADMIN_TOKEN", "")
 
@@ -134,7 +152,7 @@ def spa(path):
         return send_from_directory(DIST, path)
     if (DIST / "index.html").exists():
         return send_from_directory(DIST, "index.html")
-    return "Run `npm run build` in the frontend folder first, or use `npm run dev` for development.", 404
+    return "Upload the contents of frontend/dist into public_html (index.html, assets, and images).", 404
 
 
 init_db()

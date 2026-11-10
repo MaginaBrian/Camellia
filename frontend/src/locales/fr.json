@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "description": "Safaris de luxe sur mesure, rencontres culturelles, treks en montagne et escapades balnéaires, conçus par Camellia Horizons.",
+    "homeTitle": "Camellia Horizons | Voyages privés en Afrique de l’Est",
+    "philanthropyTitle": "Philanthropie | Camellia Horizons"
+  },
+  "lang": { "label": "Langue" },
+  "nav": {
+    "home": "Camellia Horizons, accueil",
+    "main": "Principal",
+    "destinations": "Destinations",
+    "journeys": "Voyages",
+    "philanthropy": "Philanthropie",
+    "when": "Quand partir",
+    "planTrip": "Préparer un voyage",
+    "menu": "Menu",
+    "speak": "Parlez-nous",
+    "agentsLong": "Pour les agents de voyages",
+    "agentsShort": "Conseillers",
+    "countries": "Pays",
+    "places": "Lieux",
+    "allJourneys": "Tous les voyages",
+    "destinationsPanel": "Destinations",
+    "journeysPanel": "Voyages"
+  },
+  "hero": {
+    "line1": "Voici votre Afrique.",
+    "line2": "Votre histoire.",
+    "line3": "À votre façon.",
+    "lede": "Safaris de luxe sur mesure, rencontres culturelles authentiques, treks en montagne et escapades balnéaires idylliques, pensés par une petite équipe d’experts de la destination et réalisés par des spécialistes locaux forts de plusieurs décennies d’expérience en Afrique.",
+    "plan": "Préparer mon voyage",
+    "see": "Voir les voyages",
+    "corner1": "Au-delà du sauvage.",
+    "corner2": "Au-delà du luxe.",
+    "aboutLabel": "À propos"
+  },
+  "aboutLines": [
+    "Chaque voyage est conçu selon les personnes qui partent : les parcs, le rythme et la saison, et il est préparé par des gens qui connaissent le terrain.",
+    "Les guides, les camps et le travail de chaque jour restent près des lieux que vous visitez."
+  ],
+  "destinations": {
+    "heading": "Le Kenya, la Tanzanie et la côte.",
+    "kenya": {
+      "name": "Kenya",
+      "alt": "Éléphants dans le Masai Mara",
+      "credit": "Éléphants, Masai Mara. Photo : Ray in Manila, CC BY 2.0"
+    },
+    "tanzania": {
+      "name": "Tanzanie",
+      "alt": "Le sommet du Kilimandjaro au-dessus des nuages",
+      "credit": "Kilimandjaro. Photo : Joel Peel, CC0"
+    },
+    "coast": {
+      "name": "La côte",
+      "alt": "Un boutre sur l’eau à Zanzibar",
+      "credit": "Boutre, Zanzibar. Photo : Anton Zelenov, CC BY-SA 3.0",
+      "short": "la côte"
+    }
+  },
+  "journeySets": {
+    "Safari": {
+      "alt": "Éléphants dans le Masai Mara",
+      "credit": "Éléphants, Masai Mara. Photo : Ray in Manila, CC BY 2.0"
+    },
+    "Trek": {
+      "alt": "Le sommet du Kilimandjaro au-dessus des nuages",
+      "credit": "Kilimandjaro. Photo : Joel Peel, CC0"
+    },
+    "Beach": {
+      "alt": "Un boutre sur l’eau à Zanzibar",
+      "credit": "Boutre, Zanzibar. Photo : Anton Zelenov, CC BY-SA 3.0"
+    }
+  },
+  "categories": {
+    "All": "Tous",
+    "Safari": "Safari",
+    "Trek": "Trek",
+    "Beach": "Plage"
+  },
+  "journeysHead": {
+    "usual": "Les voyages que nous préparons le plus souvent",
+    "intro": "Chacun est un point de départ. Dites-nous vos dates et qui voyage, et nous le remodelerons.",
+    "in": "Voyages à {{place}}",
+    "coast": "Voyages sur la côte",
+    "category": "Voyages {{category}}",
+    "all": "Tous les voyages",
+    "type": "Type de voyage",
+    "days": "{{count}} jours",
+    "from": "À partir de {{price}} par personne",
+    "ask": "Demander ce voyage",
+    "showMain": "Voir les voyages principaux",
+    "fineprint": "Les prix sont indicatifs pour deux voyageurs en chambre partagée et varient selon la saison et le camp. Photographies des voyages : Ray in Manila ; Charles J. Sharp ; Bernard Dupont ; Joel Peel ; Andy Witchger ; Anton Zelenov. Via Wikimedia Commons."
+  },
+  "journeys": {
+    "northern-circuit": {
+      "title": "Circuit nord, avec guide privé",
+      "blurb": "Les éléphants de Tarangire, le sol du cratère du Ngorongoro et le Serengeti ouvert, avec un véhicule privé et le même guide tout au long."
+    },
+    "migration-season": {
+      "title": "Sur les traces de la grande migration",
+      "blurb": "Des camps placés là où se trouvent les troupeaux pendant votre mois de voyage, des plaines de mise bas aux traversées de rivière."
+    },
+    "short-safari": {
+      "title": "Quatre jours, un grand parc",
+      "blurb": "Un safari plus court qui entre en profondeur dans un seul parc au lieu d’en enchaîner plusieurs."
+    },
+    "kilimanjaro-lemosho": {
+      "title": "Le Kilimandjaro par la voie Lemosho",
+      "blurb": "L’approche la plus longue, avec le temps de s’acclimater, une équipe de montagne complète et une trousse médicale à chaque ascension."
+    },
+    "meru-warmup": {
+      "title": "Le mont Meru, puis le safari",
+      "blurb": "Marchez d’abord sur le bord du cratère du Meru, puis partez dans les parcs les jambes solides et moins de monde derrière vous."
+    },
+    "island-stay": {
+      "title": "Séjour à la plage après la brousse",
+      "blurb": "Cinq jours sans hâte sur la côte : un séjour boutique, une sortie en boutre et rien d’autre à faire."
+    }
+  },
+  "why": {
+    "heading": "Pourquoi voyager avec {{name}}",
+    "intro": "L’itinéraire est préparé par la même équipe qui le conduit. Le rythme est le vôtre, et notre façon de planifier vise à laisser les lieux que vous visitez mieux préservés.",
+    "planner": "Parler à un conseiller",
+    "items": [
+      { "title": "Préparé sur le terrain", "text": "Votre itinéraire est préparé par la même équipe qui le conduit, donc rien ne se perd entre les bureaux." },
+      { "title": "Véhicules et guides privés", "text": "Le véhicule est le vôtre. Vous donnez le rythme, et votre guide sait quand rester et quand avancer." },
+      { "title": "Des voyages sur mesure", "text": "Safaris, treks et temps sur la côte peuvent être adaptés aux dates, au rythme, aux enfants et aux célébrations." },
+      { "title": "Un conseil honnête sur les saisons", "text": "Nous vous disons ce que chaque mois est vraiment, y compris les mois calmes et pluvieux." },
+      { "title": "Un bureau que vous pouvez joindre", "text": "Des guides formés, des camps vérifiés et un bureau à Nairobi qui suit le voyage avec vous." },
+      { "title": "Un voyage qui rend quelque chose", "text": "La faune, les moyens de subsistance, la culture et le soutien aux enfants ayant des besoins particuliers, y compris les enfants porteurs de trisomie 21, font partie de la façon dont nous espérons que chaque voyage rende quelque chose." }
+    ]
+  },
+  "agents": {
+    "kicker": "Pour les conseillers en voyages",
+    "heading": "Votre équipe sur place en Afrique de l’Est.",
+    "lede": "Vous gardez le client. Nous organisons les véhicules, les guides et les camps, et le voyage peut se faire sous votre nom.",
+    "points": [
+      "Tarifs et itinéraires sous votre propre marque",
+      "Logistique au sol, véhicules et guides inclus",
+      "Un contact nommé qui répond vite",
+      "Un soutien pour vos clients à toute heure"
+    ],
+    "desk": "Parlez au bureau de Nairobi",
+    "plan": "Préparer un voyage avec nous",
+    "topic": "Partenariat avec des agents de voyages",
+    "message": "Je suis conseiller en voyages et j’aimerais travailler avec vous sur un voyage."
+  },
+  "philanthropy": {
+    "kicker": "Philanthropie",
+    "summary": "Explorez le Kenya. Célébrez l’humanité. Faites la différence.",
+    "title": ["Au-delà des safaris.", "Au-delà de la conservation.", "Changer des vies."],
+    "lede": [
+      "Chez Camellia Horizons, chaque voyage devrait laisser une marque positive : protéger la faune, renforcer les communautés, préserver les cultures et soutenir les enfants ayant des besoins particuliers. Les plus beaux voyages sont ceux qui laissent le monde un peu meilleur pour tous.",
+      "Un voyage avec nous est plus qu’un safari inoubliable. C’est aussi une chance de faire une vraie différence dans la vie de communautés du Kenya."
+    ],
+    "ask": "Demander comment un voyage rend quelque chose",
+    "askTopic": "Comment mon voyage peut rendre quelque chose",
+    "askMessage": "J’aimerais savoir comment ce voyage peut rendre quelque chose aux communautés du Kenya, y compris aux enfants ayant des besoins particuliers et aux enfants porteurs de trisomie 21.",
+    "bannerAlt": "Gnous et zèbres traversant une rivière dans le Mara",
+    "photoCredit": "Photographie de la traversée : Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons.",
+    "sections": [
+      {
+        "kicker": "Chaque voyage crée une occasion de rendre quelque chose",
+        "title": "Rendre quelque chose à nos communautés",
+        "text": [
+          "La beauté du voyage tient aux lieux que vous explorez et aux vies que vous touchez en chemin.",
+          "Notre engagement pour un voyage responsable va au-delà de la protection de la faune et du patrimoine naturel du Kenya. Nous nous engageons aussi à soutenir les communautés locales, à être aux côtés des familles vulnérables et à créer des possibilités pour les enfants et les personnes vivant avec un handicap."
+        ]
+      },
+      {
+        "kicker": "Chaque enfant mérite une chance de briller",
+        "title": "Soutenir les enfants ayant des besoins particuliers",
+        "text": [
+          "Nous nous engageons à faire une différence positive dans la vie des enfants ayant des besoins particuliers, y compris les enfants porteurs de trisomie 21, d’autisme et d’autres handicaps du développement ou physiques.",
+          "Chaque enfant mérite l’amour, la dignité, l’inclusion et la chance de s’épanouir. Chacun a ses capacités, ses rêves et son propre potentiel. Nous espérons aider à créer un avenir où les enfants de toutes les capacités sont valorisés, soutenus et ont la place de s’épanouir, par l’apprentissage, l’appartenance et la croissance personnelle.",
+          "Cet espoir comprend une éducation inclusive, les ressources dont une famille a besoin, l’inclusion sociale et des familles plus solides. La façon dont un voyage précis peut y contribuer est quelque chose que nous expliquons lorsque vous nous contactez."
+        ]
+      },
+      {
+        "title": "Renforcer les familles et les communautés locales",
+        "text": [
+          "Notre vision rejoint aussi les familles qui font face à des difficultés sociales et économiques. Nous espérons renforcer les moyens de subsistance, élargir l’accès à l’éducation et soutenir des efforts menés par les communautés qui créent un changement durable."
+        ]
+      },
+      {
+        "title": "Voyager avec un sens",
+        "text": [
+          "Lorsque vous explorez le Kenya avec Camellia Horizons, vous faites partie d’un voyage qui accorde autant de valeur aux personnes qu’aux lieux.",
+          "Nous croyons que le tourisme peut être une force pour le bien : relier les voyageurs aux communautés et encourager la compassion, la compréhension et une contribution qui a du sens."
+        ],
+        "close": "Explorez le Kenya. Célébrez l’humanité. Faites la différence."
+      }
+    ],
+    "pillars": [
+      { "title": "Faune et conservation", "text": "Protéger la faune du Kenya et les habitats naturels qui la soutiennent." },
+      { "title": "Autonomisation des communautés", "text": "Soutenir des moyens de subsistance locaux et des possibilités qui peuvent durer." },
+      { "title": "Préservation culturelle", "text": "Célébrer les traditions et protéger le patrimoine des lieux que vous visitez." },
+      { "title": "Besoins particuliers et inclusion", "text": "Un engagement pour la dignité, l’inclusion et la possibilité, pour les enfants de toutes les capacités, y compris les enfants porteurs de trisomie 21." }
+    ]
+  },
+  "seasons": {
+    "heading": "Quand partir",
+    "intro": "Choisissez un mois pour voir le temps, l’affluence et la faune habituels. Les rythmes changent d’une année à l’autre, alors nous confirmons les détails lorsque nous préparons votre voyage.",
+    "month": "Mois",
+    "weather": "Météo",
+    "visitors": "Visiteurs"
+  },
+  "months": [
+    { "m": "Jan", "climate": "Sec et chaud", "crowds": "Modéré", "note": "Les mises bas commencent dans les plaines du sud, ce qui attire lions et guépards près des jeunes." },
+    { "m": "Fév", "climate": "Chaud et presque sec", "crowds": "Animé", "note": "Pic de la saison des naissances, les troupeaux étalés sur les plaines à herbe courte." },
+    { "m": "Mar", "climate": "Les pluies arrivent", "crowds": "Calme", "note": "Paysages verts et bons tarifs. Les averses tombent plutôt l’après-midi." },
+    { "m": "Avr", "climate": "Longues pluies", "crowds": "Calme", "note": "La période la plus humide. Certains camps ferment, mais ceux qui restent offrent un bon rapport et des pistes vides." },
+    { "m": "Mai", "climate": "Les pluies s’apaisent", "crowds": "Calme", "note": "Paysages luxuriants, excellente avifaune et troupeaux qui commencent à remonter vers le nord-ouest." },
+    { "m": "Juin", "climate": "Sec et frais", "crowds": "Modéré", "note": "Les pistes sèchent et les troupeaux traversent le corridor occidental." },
+    { "m": "Juil", "climate": "Sec et frais", "crowds": "Animé", "note": "Les troupeaux atteignent les rivières du nord et les traversées deviennent possibles." },
+    { "m": "Août", "climate": "Sec", "crowds": "Animé", "note": "Mois fort du safari. Réservez tôt pour les meilleurs camps et les meilleurs points de traversée." },
+    { "m": "Sep", "climate": "Sec", "crowds": "Animé", "note": "Les traversées continuent et l’herbe est courte, les prédateurs sont donc faciles à observer." },
+    { "m": "Oct", "climate": "Sec, plus doux", "crowds": "Modéré", "note": "Moins de véhicules aux rivières du nord avant le début des petites pluies." },
+    { "m": "Nov", "climate": "Petites pluies", "crowds": "Calme", "note": "Les troupeaux redescendent vers le sud. Orages brefs, plaines vertes et prix plus bas." },
+    { "m": "Déc", "climate": "Doux, quelques averses", "crowds": "Animé", "note": "La saison des fêtes amène du monde, mais la faune des plaines du sud est excellente." }
+  ],
+  "footer": {
+    "photoAlt": "Prairie dorée dans une savane ouverte",
+    "address": "Adresse",
+    "city": "Lavington, Nairobi",
+    "country": "Kenya",
+    "contacts": "Contacts",
+    "social": "Réseaux",
+    "map": "Voir sur la carte",
+    "legal": "{{year}} {{name}}. Tous droits réservés."
+  },
+  "enquire": {
+    "close": "Fermer",
+    "for": "Demande pour {{place}}",
+    "thanks": "Merci. Nous avons bien reçu votre demande.",
+    "reply": "Un conseiller répondra par e-mail sous un jour ouvré.",
+    "title": "Préparer ce voyage",
+    "first": "Prénom",
+    "last": "Nom",
+    "phone": "Téléphone ou WhatsApp",
+    "email": "E-mail",
+    "advisor": "Êtes-vous conseiller en voyages ?",
+    "no": "Non",
+    "yes": "Oui",
+    "country": "Choisissez un pays",
+    "eastAfrica": "Afrique de l’Est",
+    "place": "Choisissez un lieu",
+    "anyPlace": "N’importe quel lieu",
+    "countryFirst": "Choisissez d’abord un pays",
+    "month": "Mois du voyage",
+    "unsure": "Pas encore sûr",
+    "travellers": "Voyageurs",
+    "about": "Parlez-nous du voyage",
+    "placeholder": "Les dates, qui voyage et ce que vous espérez voir.",
+    "consent": "J’accepte que {{name}} utilise ces informations pour répondre au sujet de ce voyage.",
+    "send": "Envoyer ma demande",
+    "sending": "Envoi...",
+    "chat": "Vous préférez discuter ? Écrivez-nous sur WhatsApp",
+    "planMessage": "J’aimerais préparer {{title}}.",
+    "advisorPrefix": "Conseiller en voyages. ",
+    "fallbackAlt": "Un lion mâle au repos dans l’herbe du Serengeti",
+    "fallbackCredit": "Lion, Serengeti. Photo : Giles Laurent, CC BY-SA 4.0",
+    "errors": {
+      "first": "Indiquez votre prénom.",
+      "last": "Indiquez votre nom.",
+      "message": "Parlez-nous un peu du voyage (au moins 10 caractères).",
+      "consent": "Confirmez que nous pouvons vous répondre au sujet de ce voyage.",
+      "name": "Indiquez votre nom.",
+      "email": "Indiquez une adresse e-mail valide."
+    }
+  },
+  "errors": {
+    "network": "Nous n’avons pas pu joindre le serveur. Vérifiez votre connexion ou écrivez-nous sur WhatsApp.",
+    "generic": "Quelque chose s’est mal passé. Veuillez réessayer.",
+    "rate": "Trop de demandes. Réessayez plus tard."
+  }
+}

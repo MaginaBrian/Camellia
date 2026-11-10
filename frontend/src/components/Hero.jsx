@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react'
-import { aboutLines, brand } from '../content.js'
+import { useTranslation } from 'react-i18next'
+import { brand } from '../content.js'
 
 export default function Hero({ onPlan }) {
+  const { t } = useTranslation()
   const videoRef = useRef(null)
 
   useEffect(() => {
@@ -28,20 +30,22 @@ export default function Hero({ onPlan }) {
       <div className="hero__shade" />
       <div className="wrap hero__inner">
         <p className="kicker kicker--light">{brand.name}</p>
-        <h1 className="hero__title">Africa, arranged around you.</h1>
-        <p className="hero__lede">
-          Private safaris, mountain treks and island stays, planned by a small team and guided by people who know the ground.
-        </p>
+        <h1 className="hero__title">
+          {t('hero.line1')}<br />
+          {t('hero.line2')}<br />
+          {t('hero.line3')}
+        </h1>
+        <p className="hero__lede">{t('hero.lede')}</p>
         <div className="hero__actions">
-          <button className="btn btn--camellia" type="button" onClick={() => onPlan({})}>Plan my journey</button>
-          <a className="btn btn--ghost" href="#journeys">See journeys</a>
+          <button className="btn btn--camellia" type="button" onClick={() => onPlan({})}>{t('hero.plan')}</button>
+          <a className="btn btn--ghost" href="#journeys">{t('hero.see')}</a>
         </div>
       </div>
-      <p className="hero__corner">Beyond the wild.<br />Beyond luxury.</p>
+      <p className="hero__corner">{t('hero.corner1')}<br />{t('hero.corner2')}</p>
     </section>
-    <section className="intro" aria-label="About">
+    <section className="intro" aria-label={t('hero.aboutLabel')}>
       <div className="wrap intro__inner">
-        {aboutLines.map((line) => <p key={line}>{line}</p>)}
+        {t('aboutLines', { returnObjects: true }).map((line) => <p key={line}>{line}</p>)}
       </div>
     </section>
     </>

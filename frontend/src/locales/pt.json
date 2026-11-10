@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "description": "Safáris de luxo à medida, encontros culturais, caminhadas na montanha e fugas à praia, planeados pela Camellia Horizons.",
+    "homeTitle": "Camellia Horizons | Viagens privadas pela África Oriental",
+    "philanthropyTitle": "Filantropia | Camellia Horizons"
+  },
+  "lang": { "label": "Idioma" },
+  "nav": {
+    "home": "Camellia Horizons, início",
+    "main": "Principal",
+    "destinations": "Destinos",
+    "journeys": "Viagens",
+    "philanthropy": "Filantropia",
+    "when": "Quando ir",
+    "planTrip": "Planear uma viagem",
+    "menu": "Menu",
+    "speak": "Fale connosco",
+    "agentsLong": "Para agentes de viagens",
+    "agentsShort": "Consultores",
+    "countries": "Países",
+    "places": "Lugares",
+    "allJourneys": "Todas as viagens",
+    "destinationsPanel": "Destinos",
+    "journeysPanel": "Viagens"
+  },
+  "hero": {
+    "line1": "Esta é a sua África.",
+    "line2": "A sua história.",
+    "line3": "À sua maneira.",
+    "lede": "Safáris de luxo à medida, encontros culturais autênticos, caminhadas na montanha e fugas idílicas à praia, pensados por uma pequena equipa de especialistas no destino e concretizados por especialistas locais com décadas de experiência em África.",
+    "plan": "Planear a minha viagem",
+    "see": "Ver viagens",
+    "corner1": "Para além do selvagem.",
+    "corner2": "Para além do luxo.",
+    "aboutLabel": "Sobre"
+  },
+  "aboutLines": [
+    "Cada viagem é desenhada em função de quem viaja: os parques, o ritmo e a época do ano, e é planeada por pessoas que conhecem o terreno.",
+    "Os guias, os acampamentos e o trabalho de cada dia ficam perto dos lugares que visita."
+  ],
+  "destinations": {
+    "heading": "Quénia, Tanzânia e a costa.",
+    "kenya": {
+      "name": "Quénia",
+      "alt": "Elefantes no Masai Mara",
+      "credit": "Elefantes, Masai Mara. Foto: Ray in Manila, CC BY 2.0"
+    },
+    "tanzania": {
+      "name": "Tanzânia",
+      "alt": "O cume do Kilimanjaro acima das nuvens",
+      "credit": "Kilimanjaro. Foto: Joel Peel, CC0"
+    },
+    "coast": {
+      "name": "A costa",
+      "alt": "Um dhow na água de Zanzibar",
+      "credit": "Dhow, Zanzibar. Foto: Anton Zelenov, CC BY-SA 3.0",
+      "short": "a costa"
+    }
+  },
+  "journeySets": {
+    "Safari": {
+      "alt": "Elefantes no Masai Mara",
+      "credit": "Elefantes, Masai Mara. Foto: Ray in Manila, CC BY 2.0"
+    },
+    "Trek": {
+      "alt": "O cume do Kilimanjaro acima das nuvens",
+      "credit": "Kilimanjaro. Foto: Joel Peel, CC0"
+    },
+    "Beach": {
+      "alt": "Um dhow na água de Zanzibar",
+      "credit": "Dhow, Zanzibar. Foto: Anton Zelenov, CC BY-SA 3.0"
+    }
+  },
+  "categories": {
+    "All": "Todas",
+    "Safari": "Safári",
+    "Trek": "Trekking",
+    "Beach": "Praia"
+  },
+  "journeysHead": {
+    "usual": "As viagens que mais planeamos",
+    "intro": "Cada uma é um ponto de partida. Diga-nos as datas e quem viaja, e adaptamo-la.",
+    "in": "Viagens em {{place}}",
+    "coast": "Viagens na costa",
+    "category": "Viagens de {{category}}",
+    "all": "Todas as viagens",
+    "type": "Tipo de viagem",
+    "days": "{{count}} dias",
+    "from": "Desde {{price}} por pessoa",
+    "ask": "Perguntar sobre esta viagem",
+    "showMain": "Ver as viagens principais",
+    "fineprint": "Os preços são uma orientação para dois viajantes a partilhar e mudam com a época e o acampamento. Fotografias das viagens: Ray in Manila; Charles J. Sharp; Bernard Dupont; Joel Peel; Andy Witchger; Anton Zelenov. Via Wikimedia Commons."
+  },
+  "journeys": {
+    "northern-circuit": {
+      "title": "Circuito norte, com guia privado",
+      "blurb": "Os elefantes de Tarangire, o chão da cratera de Ngorongoro e o Serengeti aberto, com um veículo privado e o mesmo guia durante todo o percurso."
+    },
+    "migration-season": {
+      "title": "A seguir a grande migração",
+      "blurb": "Acampamentos colocados onde estiverem as manadas no seu mês de viagem, das planícies de parto às travessias do rio."
+    },
+    "short-safari": {
+      "title": "Quatro dias, um grande parque",
+      "blurb": "Um safári mais curto que entra a fundo num só parque em vez de percorrer vários à pressa."
+    },
+    "kilimanjaro-lemosho": {
+      "title": "O Kilimanjaro pela rota Lemosho",
+      "blurb": "A aproximação mais longa, com tempo para aclimatar, uma equipa completa de montanha e um estojo médico em cada subida."
+    },
+    "meru-warmup": {
+      "title": "O monte Meru e depois o safári",
+      "blurb": "Caminhe primeiro pela borda da cratera do Meru e entre depois nos parques com as pernas fortes e menos gente atrás."
+    },
+    "island-stay": {
+      "title": "Estadia na praia depois da savana",
+      "blurb": "Cinco dias sem pressa na costa: uma estadia boutique, um passeio de dhow e mais nada para fazer."
+    }
+  },
+  "why": {
+    "heading": "Porque viajar com a {{name}}",
+    "intro": "O itinerário é preparado pela mesma equipa que o realiza. O ritmo é o seu, e a forma como planeamos procura deixar melhor cuidados os lugares que visita.",
+    "planner": "Falar com um planeador",
+    "items": [
+      { "title": "Planeado no terreno", "text": "O seu itinerário é preparado pela mesma equipa que o realiza, por isso nada se perde entre escritórios." },
+      { "title": "Veículos e guias privados", "text": "O veículo é seu. Você marca o ritmo, e o seu guia sabe quando ficar e quando seguir." },
+      { "title": "Viagens à medida", "text": "Safáris, caminhadas e tempo na costa podem adaptar-se às datas, ao ritmo, às crianças e às celebrações." },
+      { "title": "Conselho honesto sobre as épocas", "text": "Dizemos-lhe como é realmente cada mês, incluindo os calmos e os chuvosos." },
+      { "title": "Um balcão a que pode ligar", "text": "Guias formados, acampamentos verificados e um balcão em Nairobi que acompanha a viagem consigo." },
+      { "title": "Uma viagem que devolve algo", "text": "A fauna, os meios de vida, a cultura e o apoio a crianças com necessidades especiais, incluindo crianças com síndrome de Down, fazem parte da forma como esperamos que cada viagem devolva algo." }
+    ]
+  },
+  "agents": {
+    "kicker": "Para consultores de viagens",
+    "heading": "A sua equipa no terreno na África Oriental.",
+    "lede": "O cliente continua a ser seu. Nós organizamos os veículos, os guias e os acampamentos, e a viagem pode realizar-se em seu nome.",
+    "points": [
+      "Tarifas e itinerários com a sua própria marca",
+      "Operação no terreno, veículos e guias incluídos",
+      "Um contacto com nome que responde depressa",
+      "Apoio aos seus clientes a qualquer hora"
+    ],
+    "desk": "Fale com o balcão de Nairobi",
+    "plan": "Planear uma viagem connosco",
+    "topic": "Parceria com agentes de viagens",
+    "message": "Sou consultor de viagens e gostaria de trabalhar convosco numa viagem."
+  },
+  "philanthropy": {
+    "kicker": "Filantropia",
+    "summary": "Explore o Quénia. Celebre a humanidade. Faça a diferença.",
+    "title": ["Para além dos safáris.", "Para além da conservação.", "Mudar vidas."],
+    "lede": [
+      "Na Camellia Horizons, cada viagem deve deixar uma marca positiva: proteger a fauna, fortalecer as comunidades, preservar as culturas e apoiar crianças com necessidades especiais. As grandes viagens são as que deixam o mundo um pouco melhor para todos.",
+      "Uma viagem connosco é mais do que um safári inesquecível. É também uma oportunidade de fazer uma diferença real na vida de comunidades do Quénia."
+    ],
+    "ask": "Pergunte como uma viagem devolve algo",
+    "askTopic": "Como a minha viagem pode devolver algo",
+    "askMessage": "Gostaria de saber como esta viagem pode devolver algo às comunidades do Quénia, incluindo crianças com necessidades especiais e crianças com síndrome de Down.",
+    "bannerAlt": "Gnus e zebras a atravessar um rio na Mara",
+    "photoCredit": "Fotografia da travessia do rio: Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons.",
+    "sections": [
+      {
+        "kicker": "Cada viagem cria uma oportunidade de devolver algo",
+        "title": "Devolver algo às nossas comunidades",
+        "text": [
+          "A beleza de viajar está nos lugares que explora e nas vidas que toca pelo caminho.",
+          "O nosso compromisso com uma viagem responsável vai além de proteger a fauna e preservar o património natural do Quénia. Comprometemo-nos também a apoiar as comunidades locais, a estar ao lado das famílias vulneráveis e a criar oportunidades para crianças e pessoas que vivem com deficiência."
+        ]
+      },
+      {
+        "kicker": "Cada criança merece uma oportunidade de brilhar",
+        "title": "Apoio a crianças com necessidades especiais",
+        "text": [
+          "Comprometemo-nos a fazer uma diferença positiva na vida de crianças com necessidades especiais, incluindo crianças com síndrome de Down, autismo e outras deficiências do desenvolvimento ou físicas.",
+          "Cada criança merece amor, dignidade, inclusão e a oportunidade de prosperar. Cada uma tem capacidades, sonhos e um potencial próprios. Esperamos ajudar a criar um futuro em que as crianças de todas as capacidades sejam valorizadas, apoiadas e tenham espaço para florescer, através da aprendizagem, do pertencer e do crescimento pessoal.",
+          "Essa esperança inclui uma educação inclusiva, os recursos de que uma família precisa, a inclusão social e famílias mais fortes. Como uma viagem concreta pode contribuir é algo que explicamos quando nos consulta."
+        ]
+      },
+      {
+        "title": "Fortalecer famílias e comunidades locais",
+        "text": [
+          "A nossa visão chega também às famílias que enfrentam desafios sociais e económicos. Esperamos fortalecer os meios de vida, alargar o acesso à educação e apoiar esforços liderados pela comunidade que criem uma mudança duradoura."
+        ]
+      },
+      {
+        "title": "Viajar com propósito",
+        "text": [
+          "Quando explora o Quénia com a Camellia Horizons, faz parte de uma viagem que valoriza as pessoas tanto quanto os lugares.",
+          "Acreditamos que o turismo pode ser uma força para o bem: ligar os viajantes às comunidades e encorajar a compaixão, a compreensão e um contributo com sentido."
+        ],
+        "close": "Explore o Quénia. Celebre a humanidade. Faça a diferença."
+      }
+    ],
+    "pillars": [
+      { "title": "Fauna e conservação", "text": "Proteger a fauna do Quénia e os habitats naturais que a sustentam." },
+      { "title": "Fortalecimento comunitário", "text": "Apoiar meios de vida locais e oportunidades que possam durar." },
+      { "title": "Preservação cultural", "text": "Celebrar as tradições e proteger o património dos lugares que visita." },
+      { "title": "Necessidades especiais e inclusão", "text": "Um compromisso com a dignidade, a inclusão e a oportunidade para crianças de todas as capacidades, incluindo crianças com síndrome de Down." }
+    ]
+  },
+  "seasons": {
+    "heading": "Quando ir",
+    "intro": "Escolha um mês para ver como costumam ser o tempo, a afluência e a fauna. Os padrões mudam de ano para ano, por isso confirmamos os pormenores quando planeamos a sua viagem.",
+    "month": "Mês",
+    "weather": "Tempo",
+    "visitors": "Visitantes"
+  },
+  "months": [
+    { "m": "Jan", "climate": "Seco e quente", "crowds": "Moderado", "note": "Começa a época de partos nas planícies do sul, o que aproxima leões e chitas das crias." },
+    { "m": "Fev", "climate": "Quente e quase seco", "crowds": "Movimentado", "note": "Auge da época de partos, com as manadas espalhadas pelas planícies de erva curta." },
+    { "m": "Mar", "climate": "Chegam as chuvas", "crowds": "Calmo", "note": "Paisagens verdes e boas tarifas. Os aguaceiros tendem a chegar à tarde." },
+    { "m": "Abr", "climate": "Chuvas longas", "crowds": "Calmo", "note": "O período mais húmido. Alguns acampamentos fecham, mas os que abrem oferecem bom valor e estradas vazias." },
+    { "m": "Mai", "climate": "As chuvas abrandam", "crowds": "Calmo", "note": "Paisagem verdejante, excelente avifauna e manadas que começam a mover-se para noroeste." },
+    { "m": "Jun", "climate": "Seco e fresco", "crowds": "Moderado", "note": "As estradas secam e as manadas percorrem o corredor ocidental." },
+    { "m": "Jul", "climate": "Seco e fresco", "crowds": "Movimentado", "note": "As manadas chegam aos rios do norte e as travessias tornam-se possíveis." },
+    { "m": "Ago", "climate": "Seco", "crowds": "Movimentado", "note": "Mês de pico do safári. Reserve cedo para os melhores acampamentos e os melhores pontos de travessia." },
+    { "m": "Set", "climate": "Seco", "crowds": "Movimentado", "note": "As travessias continuam e a erva está curta, por isso é fácil observar os predadores." },
+    { "m": "Out", "climate": "Seco, mais quente", "crowds": "Moderado", "note": "Menos veículos nos rios do norte antes de começarem as chuvas curtas." },
+    { "m": "Nov", "climate": "Chuvas curtas", "crowds": "Calmo", "note": "As manadas voltam para sul. Tempestades breves, planícies verdes e preços mais baixos." },
+    { "m": "Dez", "climate": "Quente, alguns aguaceiros", "crowds": "Movimentado", "note": "A época festiva traz mais gente, mas a fauna das planícies do sul é excelente." }
+  ],
+  "footer": {
+    "photoAlt": "Prado dourado numa savana aberta",
+    "address": "Morada",
+    "city": "Lavington, Nairobi",
+    "country": "Quénia",
+    "contacts": "Contactos",
+    "social": "Redes",
+    "map": "Ver no mapa",
+    "legal": "{{year}} {{name}}. Todos os direitos reservados."
+  },
+  "enquire": {
+    "close": "Fechar",
+    "for": "Pedido para {{place}}",
+    "thanks": "Obrigado. Recebemos o seu pedido.",
+    "reply": "Um planeador responderá por e-mail num dia útil.",
+    "title": "Planear esta viagem",
+    "first": "Nome",
+    "last": "Apelido",
+    "phone": "Telefone ou WhatsApp",
+    "email": "E-mail",
+    "advisor": "É consultor de viagens?",
+    "no": "Não",
+    "yes": "Sim",
+    "country": "Escolha um país",
+    "eastAfrica": "África Oriental",
+    "place": "Escolha um lugar",
+    "anyPlace": "Qualquer lugar",
+    "countryFirst": "Escolha primeiro um país",
+    "month": "Mês da viagem",
+    "unsure": "Ainda não sei",
+    "travellers": "Viajantes",
+    "about": "Fale-nos da viagem",
+    "placeholder": "Datas, quem viaja e o que espera ver.",
+    "consent": "Aceito que a {{name}} use estes dados para responder sobre esta viagem.",
+    "send": "Enviar o meu pedido",
+    "sending": "A enviar...",
+    "chat": "Prefere conversar? Escreva-nos no WhatsApp",
+    "planMessage": "Gostaria de planear {{title}}.",
+    "advisorPrefix": "Consultor de viagens. ",
+    "fallbackAlt": "Um leão macho a descansar na erva do Serengeti",
+    "fallbackCredit": "Leão, Serengeti. Foto: Giles Laurent, CC BY-SA 4.0",
+    "errors": {
+      "first": "Escreva o seu nome.",
+      "last": "Escreva o seu apelido.",
+      "message": "Conte-nos um pouco da viagem (pelo menos 10 caracteres).",
+      "consent": "Confirme que podemos responder sobre esta viagem.",
+      "name": "Escreva o seu nome.",
+      "email": "Escreva um e-mail válido."
+    }
+  },
+  "errors": {
+    "network": "Não conseguimos ligar ao servidor. Verifique a ligação ou escreva-nos no WhatsApp.",
+    "generic": "Algo correu mal. Tente de novo.",
+    "rate": "Demasiados pedidos. Tente mais tarde."
+  }
+}

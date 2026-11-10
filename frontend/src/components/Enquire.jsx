@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { sendInquiry } from '../api.js'
-import { brand, destinations, enquireFallback, months } from '../content.js'
+import { brand, destinations } from '../content.js'
 
 const empty = {
   first: '',
@@ -18,6 +19,8 @@ const empty = {
 }
 
 export default function Enquire({ request, onClose }) {
+  const { t } = useTranslation()
+  const months = t('months', { returnObjects: true })
   const titleId = useId()
   const dialogRef = useRef(null)
   const [form, setForm] = useState(empty)
@@ -62,8 +65,10 @@ export default function Enquire({ request, onClose }) {
   }, [onClose])
 
   const country = destinations.find((d) => d.id === form.destination)
-  const photo = country || enquireFallback
-  const label = !country ? enquireFallback.label : country.id === 'coast' ? 'the coast' : country.name
+  const photo = country
+    ? { image: country.image, alt: t(`destinations.${country.id}.alt`), credit: t(`destinations.${country.id}.credit`) }
+    : { image: '/images/hero.jpg', alt: t('enquire.fallbackAlt'), credit: t('enquire.fallbackCredit') }
+  const label = !country ? t('enquire.eastAfrica') : country.id === 'coast' ? t('destinations.coast.short') : t(`destinations.${country.id}.name`)
   const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }))
 
   function chooseCountry(e) {
@@ -75,17 +80,17 @@ export default function Enquire({ request, onClose }) {
     e.preventDefault()
     const errors = {}
     const name = `${form.first} ${form.last}`.trim()
-    if (form.first.trim().length < 1) errors.first = 'Enter your first name.'
-    if (form.last.trim().length < 1) errors.last = 'Enter your last name.'
-    if (form.message.trim().length < 10) errors.message = 'Tell us a little about the trip (at least 10 characters).'
-    if (!form.consent) errors.consent = 'Please confirm we may reply about this trip.'
+    if (form.first.trim().length < 1) errors.first = t('enquire.errors.first')
+    if (form.last.trim().length < 1) errors.last = t('enquire.errors.last')
+    if (form.message.trim().length < 10) errors.message = t('enquire.errors.message')
+    if (!form.consent) errors.consent = t('enquire.errors.consent')
     if (Object.keys(errors).length) {
       setState({ status: 'error', errors, message: '' })
       return
     }
     setState({ status: 'sending', errors: {}, message: '' })
     const placeName = form.place
-    const topic = [request.topic, country?.name, placeName].filter(Boolean).join(' · ')
+    const topic = [request.topic, country ? t(`destinations.${country.id}.name`) : '', placeName].filter(Boolean).join(' · ')
     const res = await sendInquiry({
       name,
       email: form.email,
@@ -93,11 +98,18 @@ export default function Enquire({ request, onClose }) {
       topic,
       month: form.month,
       travelers: form.travelers,
-      message: `${form.advisor === 'yes' ? 'Travel advisor. ' : ''}${form.message.trim()}`,
+      message: `${form.advisor === 'yes' ? t('enquire.advisorPrefix') : ''}${form.message.trim()}`,
       website: form.website,
     })
     if (res.ok) setState({ status: 'done', errors: {}, message: '' })
-    else setState({ status: 'error', errors: res.errors || {}, message: res.message || '' })
+    else {
+      const serverErrors = {}
+      for (const [key, value] of Object.entries(res.errors || {})) {
+        const field = key === 'name' ? 'first' : key
+        serverErrors[field] = t(`enquire.errors.${key}`, { defaultValue: value })
+      }
+      setState({ status: 'error', errors: serverErrors, message: res.code ? t(`errors.${res.code}`) : '' })
+    }
   }
 
   const err = (key) => state.errors[key] && <span className="field__error">{state.errors[key]}</span>
@@ -115,79 +127,79 @@ export default function Enquire({ request, onClose }) {
         <figure className="enquire__photo">
           <img src={photo.image} alt={photo.alt} />
           <figcaption>
-            <span className="enquire__label">Enquire for {label}</span>
+            <span className="enquire__label">{t('enquire.for', { place: label })}</span>
             <span className="enquire__credit">{photo.credit}</span>
           </figcaption>
         </figure>
         <div className="enquire__body">
-          <button className="enquire__close" type="button" onClick={onClose} aria-label="Close">×</button>
+          <button className="enquire__close" type="button" onClick={onClose} aria-label={t('enquire.close')}>×</button>
           {state.status === 'done' ? (
             <div className="enquire__done" role="status">
-              <h2 id={titleId}>Thank you. We have your request.</h2>
-              <p>A planner will reply by email within one working day.</p>
-              <button className="btn btn--forest" type="button" onClick={onClose}>Close</button>
+              <h2 id={titleId}>{t('enquire.thanks')}</h2>
+              <p>{t('enquire.reply')}</p>
+              <button className="btn btn--forest" type="button" onClick={onClose}>{t('enquire.close')}</button>
             </div>
           ) : (
             <>
-              <h2 id={titleId}>Plan this journey</h2>
+              <h2 id={titleId}>{t('enquire.title')}</h2>
               <form className="form" onSubmit={submit} noValidate>
-                <label className="field">First name
+                <label className="field">{t('enquire.first')}
                   <input value={form.first} onChange={set('first')} autoComplete="given-name" required />
                   {err('first')}
                   {state.errors.name && <span className="field__error">{state.errors.name}</span>}
                 </label>
-                <label className="field">Last name
+                <label className="field">{t('enquire.last')}
                   <input value={form.last} onChange={set('last')} autoComplete="family-name" required />
                   {err('last')}
                 </label>
-                <label className="field">Phone or WhatsApp
+                <label className="field">{t('enquire.phone')}
                   <input value={form.phone} onChange={set('phone')} autoComplete="tel" placeholder="+254" />
                 </label>
-                <label className="field">Email
+                <label className="field">{t('enquire.email')}
                   <input type="email" value={form.email} onChange={set('email')} autoComplete="email" required />
                   {err('email')}
                 </label>
                 <fieldset className="field field--wide choice">
-                  <legend>Are you a travel advisor?</legend>
-                  <label><input type="radio" name="advisor" value="no" checked={form.advisor === 'no'} onChange={set('advisor')} /> No</label>
-                  <label><input type="radio" name="advisor" value="yes" checked={form.advisor === 'yes'} onChange={set('advisor')} /> Yes</label>
+                  <legend>{t('enquire.advisor')}</legend>
+                  <label><input type="radio" name="advisor" value="no" checked={form.advisor === 'no'} onChange={set('advisor')} /> {t('enquire.no')}</label>
+                  <label><input type="radio" name="advisor" value="yes" checked={form.advisor === 'yes'} onChange={set('advisor')} /> {t('enquire.yes')}</label>
                 </fieldset>
-                <label className="field">Choose a country
+                <label className="field">{t('enquire.country')}
                   <select value={form.destination} onChange={chooseCountry}>
-                    <option value="">East Africa</option>
-                    {destinations.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
+                    <option value="">{t('enquire.eastAfrica')}</option>
+                    {destinations.map((d) => <option key={d.id} value={d.id}>{t(`destinations.${d.id}.name`)}</option>)}
                   </select>
                 </label>
-                <label className="field">Choose a place
+                <label className="field">{t('enquire.place')}
                   <select value={form.place} onChange={set('place')} disabled={!country}>
-                    <option value="">{country ? 'Any place' : 'Choose a country first'}</option>
+                    <option value="">{country ? t('enquire.anyPlace') : t('enquire.countryFirst')}</option>
                     {country?.places.map((p) => <option key={p}>{p}</option>)}
                   </select>
                 </label>
-                <label className="field">Travel month
+                <label className="field">{t('enquire.month')}
                   <select value={form.month} onChange={set('month')}>
-                    <option value="">Not sure yet</option>
+                    <option value="">{t('enquire.unsure')}</option>
                     {months.map((m) => <option key={m.m}>{m.m}</option>)}
                   </select>
                 </label>
-                <label className="field">Travellers
+                <label className="field">{t('enquire.travellers')}
                   <input type="number" min="1" max="40" value={form.travelers} onChange={set('travelers')} />
                 </label>
-                <label className="field field--wide">Tell us about the trip
-                  <textarea rows="4" value={form.message} onChange={set('message')} required placeholder="Dates, who is travelling, and what you hope to see." />
+                <label className="field field--wide">{t('enquire.about')}
+                  <textarea rows="4" value={form.message} onChange={set('message')} required placeholder={t('enquire.placeholder')} />
                   {err('message')}
                 </label>
                 <label className="consent">
                   <input type="checkbox" checked={form.consent} onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))} />
-                  <span>I agree that {brand.name} may use these details to reply about this trip.</span>
+                  <span>{t('enquire.consent', { name: brand.name })}</span>
                 </label>
                 {err('consent')}
                 <input className="hp" tabIndex="-1" autoComplete="off" aria-hidden="true" value={form.website} onChange={set('website')} />
                 {state.message && <p className="form__error" role="alert">{state.message}</p>}
                 <button className="btn btn--camellia" disabled={state.status === 'sending'}>
-                  {state.status === 'sending' ? 'Sending...' : 'Send my request'}
+                  {state.status === 'sending' ? t('enquire.sending') : t('enquire.send')}
                 </button>
-                <a className="link enquire__chat" href={`https://wa.me/${brand.whatsapp}`} target="_blank" rel="noreferrer">Prefer to chat? Message us on WhatsApp</a>
+                <a className="link enquire__chat" href={`https://wa.me/${brand.whatsapp}`} target="_blank" rel="noreferrer">{t('enquire.chat')}</a>
               </form>
             </>
           )}

@@ -11,6 +11,6 @@ export default defineConfig({
     // Journeys fallback JSON lives in the backend folder, outside this root.
     fs: { allow: [path.resolve(frontendRoot, '..')] },
     // Forward API calls to Flask during development
-    proxy: { '/api': 'http://127.0.0.1:5000' },
+    proxy: { '/api': process.env.VITE_API_PROXY || 'http://127.0.0.1:5000' },
   },
 })

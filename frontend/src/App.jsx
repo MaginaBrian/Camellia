@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Journeys from './components/Journeys.jsx'
@@ -7,6 +8,7 @@ import Enquire from './components/Enquire.jsx'
 import { Agents, Footer, Philanthropy, PhilanthropyTeaser, Places, Why } from './components/Static.jsx'
 
 function Speak({ onPlan }) {
+  const { t } = useTranslation()
   const [hidden, setHidden] = useState(false)
 
   useEffect(() => {
@@ -19,17 +21,16 @@ function Speak({ onPlan }) {
 
   if (hidden) return null
   return (
-    <button className="speak" type="button" onClick={() => onPlan({})}>Speak to a planner</button>
+    <button className="speak" type="button" onClick={() => onPlan({})}>{t('why.planner')}</button>
   )
 }
-
-const HOME_TITLE = 'Camellia Horizons | Private journeys across East Africa'
 
 function pageFromHash() {
   return window.location.hash === '#philanthropy' ? 'philanthropy' : 'home'
 }
 
 export default function App() {
+  const { t, i18n } = useTranslation()
   const [plan, setPlan] = useState(null)
   const [pick, setPick] = useState({ destination: '', place: '', category: '' })
   const [view, setView] = useState(pageFromHash)
@@ -54,11 +55,11 @@ export default function App() {
 
   useLayoutEffect(() => {
     if (view === 'philanthropy') {
-      document.title = 'Philanthropy | Camellia Horizons'
+      document.title = t('meta.philanthropyTitle')
       window.scrollTo({ top: 0, behavior: 'instant' })
       return undefined
     }
-    document.title = HOME_TITLE
+    document.title = t('meta.homeTitle')
     const hash = pendingScroll.current
     if (hash == null) return undefined
     const id = !hash || hash === '#top' ? '' : hash.slice(1)
@@ -73,7 +74,7 @@ export default function App() {
     const frame = requestAnimationFrame(scroll)
     pendingScroll.current = null
     return () => cancelAnimationFrame(frame)
-  }, [view])
+  }, [view, i18n.language, t])
 
   const applyPick = (next) => {
     setPick({ destination: '', place: '', category: '', ...next })
@@ -84,12 +85,15 @@ export default function App() {
     document.getElementById('journeys')?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  const askJourney = (journey) => openPlan({
-    topic: journey.title,
-    destination: journey.destinations?.length === 1 ? journey.destinations[0] : '',
-    place: journey.places?.length === 1 ? journey.places[0] : '',
-    message: `I would like to plan ${journey.title}.`,
-  })
+  const askJourney = (journey) => {
+    const title = t(`journeys.${journey.id}.title`)
+    openPlan({
+      topic: title,
+      destination: journey.destinations?.length === 1 ? journey.destinations[0] : '',
+      place: journey.places?.length === 1 ? journey.places[0] : '',
+      message: t('enquire.planMessage', { title }),
+    })
+  }
 
   return (
     <>

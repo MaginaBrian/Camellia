@@ -21,9 +21,10 @@ export async function sendInquiry(payload) {
       body: JSON.stringify(payload),
     })
   } catch {
-    return { ok: false, message: 'We could not reach the server. Check your connection or message us on WhatsApp.' }
+    return { ok: false, code: 'network' }
   }
   const body = await res.json().catch(() => ({}))
   if (res.ok) return { ok: true }
-  return { ok: false, errors: body.errors, message: body.error || 'Something went wrong. Please try again.' }
+  const code = body.error === 'Too many requests. Please try again later.' ? 'rate' : 'generic'
+  return { ok: false, errors: body.errors, code }
 }

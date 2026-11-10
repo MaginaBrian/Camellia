@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { getJourneys } from '../api.js'
 import { destinations } from '../content.js'
 
-const price = (n) => `$${n.toLocaleString('en-US')}`
-
 export default function Journeys({ destination, place, category = '', onClear, onAsk }) {
+  const { t, i18n } = useTranslation()
   const [all, setAll] = useState([])
   const [filter, setFilter] = useState('All')
   const [showAll, setShowAll] = useState(false)
@@ -12,6 +12,8 @@ export default function Journeys({ destination, place, category = '', onClear, o
   useEffect(() => { getJourneys().then(setAll) }, [])
   useEffect(() => { setFilter('All') }, [destination, place, category])
 
+  const numberLocale = { en: 'en-US', es: 'es-ES', pt: 'pt-PT', fr: 'fr-FR', de: 'de-DE' }[i18n.language.slice(0, 2)] || 'en-US'
+  const price = (n) => `$${n.toLocaleString(numberLocale)}`
   const pool = all.filter((j) => {
     if (place) return (j.places || []).includes(place)
     if (destination) return (j.destinations || []).includes(destination)
@@ -25,25 +27,25 @@ export default function Journeys({ destination, place, category = '', onClear, o
   const shown = filter === 'All' ? listed : listed.filter((j) => j.category === filter)
   const country = destinations.find((d) => d.id === destination)
 
-  let heading = 'Journeys we plan most often'
-  if (place) heading = `Journeys in ${place}`
-  else if (destination === 'coast') heading = 'Journeys on the coast'
-  else if (country) heading = `Journeys in ${country.name}`
-  else if (category && category !== 'all') heading = `${category} journeys`
-  else if (expanded) heading = 'All journeys'
+  let heading = t('journeysHead.usual')
+  if (place) heading = t('journeysHead.in', { place })
+  else if (destination === 'coast') heading = t('journeysHead.coast')
+  else if (country) heading = t('journeysHead.in', { place: t(`destinations.${country.id}.name`) })
+  else if (category && category !== 'all') heading = t('journeysHead.category', { category: t(`categories.${category}`) })
+  else if (expanded) heading = t('journeysHead.all')
 
   return (
     <section className="section section--journeys" id="journeys">
       <div className="wrap">
         <div className="section__head">
           <h2>{heading}</h2>
-          <p>Every one is a starting point. Tell us your dates and who is travelling, and we will reshape it.</p>
+          <p>{t('journeysHead.intro')}</p>
         </div>
         {(narrowed || expanded) && cats.length > 2 && (
-          <div className="tabs" role="tablist" aria-label="Journey type">
+          <div className="tabs" role="tablist" aria-label={t('journeysHead.type')}>
             {cats.map((c) => (
               <button key={c} type="button" role="tab" aria-selected={filter === c} className={filter === c ? 'is-active' : ''} onClick={() => setFilter(c)}>
-                {c}
+                {t(`categories.${c}`)}
               </button>
             ))}
           </div>
@@ -53,12 +55,12 @@ export default function Journeys({ destination, place, category = '', onClear, o
             <li key={j.id} className="journey">
               <img className="journey__art" src={j.image} alt="" />
               <div className="journey__body">
-                <p className="journey__meta">{j.category}, {j.days} days{(j.places || []).length ? ` · ${(j.places || []).join(', ')}` : ''}</p>
-                <h3>{j.title}</h3>
-                <p>{j.blurb}</p>
+                <p className="journey__meta">{t(`categories.${j.category}`)}, {t('journeysHead.days', { count: j.days })}{(j.places || []).length ? ` · ${(j.places || []).join(', ')}` : ''}</p>
+                <h3>{t(`journeys.${j.id}.title`)}</h3>
+                <p>{t(`journeys.${j.id}.blurb`)}</p>
                 <div className="journey__foot">
-                  <span>From {price(j.from)} per person</span>
-                  <button className="link" type="button" onClick={() => onAsk(j)}>Ask about this journey</button>
+                  <span>{t('journeysHead.from', { price: price(j.from) })}</span>
+                  <button className="link" type="button" onClick={() => onAsk(j)}>{t('journeysHead.ask')}</button>
                 </div>
               </div>
             </li>
@@ -66,16 +68,13 @@ export default function Journeys({ destination, place, category = '', onClear, o
         </ul>
         <div className="journeys__more">
           {!narrowed && !expanded && pool.length > listed.length && (
-            <button className="link" type="button" onClick={() => setShowAll(true)}>All journeys</button>
+            <button className="link" type="button" onClick={() => setShowAll(true)}>{t('journeysHead.all')}</button>
           )}
           {(narrowed || expanded) && (
-            <button className="link" type="button" onClick={() => { setShowAll(false); onClear() }}>Show the main journeys</button>
+            <button className="link" type="button" onClick={() => { setShowAll(false); onClear() }}>{t('journeysHead.showMain')}</button>
           )}
         </div>
-        <p className="fineprint">
-          Prices are guides for two travellers sharing and change with season and camp choice.
-          Journey photographs: Ray in Manila; Charles J. Sharp; Bernard Dupont; Joel Peel; Andy Witchger; Anton Zelenov. Via Wikimedia Commons.
-        </p>
+        <p className="fineprint">{t('journeysHead.fineprint')}</p>
       </div>
     </section>
   )
