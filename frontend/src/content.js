@@ -1,8 +1,10 @@
 // Edit this file to change the site's text and contact details.
 export const brand = {
   name: 'Camellia Horizons',
-  phone: '+254 720 321993',
-  phoneHref: 'tel:+254720321993',
+  phones: [
+    { display: '+254 184756117', href: 'tel:+254184756117' },
+    { display: '+254 184756135', href: 'tel:+254184756135' },
+  ],
   whatsapp: '254720321993',
   email: 'info@camelliahorizons.com',
   address: ['Lavington, Nairobi', 'Kenya'],

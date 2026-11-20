@@ -51,6 +51,9 @@ a { color: inherit; }
 .util__inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .util a { color: #fff; text-decoration: none; font: 600 .72rem var(--sans); letter-spacing: .08em; text-transform: uppercase; }
 .util a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.util__phones { display: flex; align-items: center; gap: .45rem; margin: 0; min-width: 0; }
+.util__phones a { letter-spacing: .04em; white-space: nowrap; }
+.util__slash { color: #fff; font: 600 .72rem var(--sans); line-height: 1; }
 .util__right { display: flex; align-items: center; gap: 1.25rem; }
 .util__short { display: none; }
 .brand { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; font: 600 1.5rem var(--serif); letter-spacing: .01em; color: #fff; }
@@ -323,6 +326,9 @@ a.socials__item:hover { background: #fff; color: var(--forest); }
   .journeys, .why, .why-grid, .places__grid, .agents__inner, .form, .month-detail, .footer__inner, .wild__grid, .pillars { grid-template-columns: 1fr; }
   .places__grid li:last-child { grid-column: auto; }
   .places__grid button, .places__grid li:last-child button { height: 220px; }
+  .util__speak { display: none; }
+  .util__phones { gap: .35rem; }
+  .util__phones a, .util__slash { font-size: .66rem; letter-spacing: .02em; }
   .util__long { display: none; }
   .util__short { display: inline; }
   .wild__grid li, .wild__grid li:last-child { grid-column: auto; height: 240px; }

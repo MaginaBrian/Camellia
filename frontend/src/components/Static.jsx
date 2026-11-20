@@ -218,7 +218,9 @@ export function Agents({ onAsk }) {
         <div className="agents__card">
           <h3>{t('agents.desk')}</h3>
           <p className="agents__where">{t('footer.city')}, {t('footer.country')}</p>
-          <a href={brand.phoneHref}>{brand.phone}</a>
+          {brand.phones.map((phone) => (
+            <a key={phone.href} href={phone.href}>{phone.display}</a>
+          ))}
           <a href={`mailto:${brand.email}`}>{brand.email}</a>
           <a href={`https://wa.me/${brand.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp</a>
           <a href={brand.map} target="_blank" rel="noreferrer">{t('footer.map')}</a>
@@ -253,7 +255,9 @@ export function Footer() {
         </address>
         <div>
           <p className="footer__label">{t('footer.contacts')}</p>
-          <a href={brand.phoneHref}>{brand.phone}</a>
+          {brand.phones.map((phone) => (
+            <a key={phone.href} href={phone.href}>{phone.display}</a>
+          ))}
           <a href={`mailto:${brand.email}`}>{brand.email}</a>
           <a href={`https://wa.me/${brand.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp</a>
         </div>

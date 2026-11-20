@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import journeys from '../../../backend/journeys.json'
 import { languages } from '../i18n.js'
@@ -136,9 +136,15 @@ export default function Header({ view, onPlan, onPick, onAskJourney }) {
       </div>
       <div className="util">
         <div className="wrap util__inner">
-          <a className="util__phone" href={brand.phoneHref}>
-            <span className="util__speak">{t('nav.speak')}</span> {brand.phone}
-          </a>
+          <p className="util__phones">
+            <span className="util__speak">{t('nav.speak')}</span>
+            {brand.phones.map((phone, index) => (
+              <Fragment key={phone.href}>
+                {index > 0 ? <span className="util__slash" aria-hidden="true">/</span> : null}
+                <a href={phone.href}>{phone.display}</a>
+              </Fragment>
+            ))}
+          </p>
           <div className="util__right">
             <a href="#agents" onClick={closeMenus}>
               <span className="util__long">{t('nav.agentsLong')}</span>
